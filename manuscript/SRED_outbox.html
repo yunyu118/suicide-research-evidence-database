@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SRED Outbox — coauthor invitations</title>
+<style>
+  :root{
+    --burgundy:#8A2B2B; --ink:#1b1b1b; --muted:#6b6b6b;
+    --line:#e3e3e3; --bg:#faf9f8; --card:#ffffff;
+    --green:#2e7d4f; --gold:#b8860b; --blue:#2b5f8a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:Arial,Helvetica,sans-serif;line-height:1.55;
+       padding:18px 14px 60px}
+  .wrap{max-width:820px;margin:0 auto}
+  header{border-bottom:3px solid var(--burgundy);padding-bottom:14px;margin-bottom:22px}
+  h1{margin:0 0 4px;font-size:1.45rem;color:var(--burgundy);letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:.86rem}
+  .note{background:#fff;border-left:4px solid var(--blue);padding:12px 14px;
+        border-radius:0 8px 8px 0;margin:0 0 22px;font-size:.9rem;
+        box-shadow:0 1px 3px rgba(0,0,0,.05)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;
+        padding:0;margin-bottom:20px;overflow:hidden;
+        box-shadow:0 1px 4px rgba(0,0,0,.06)}
+  .card > .head{padding:14px 16px;border-left:5px solid var(--burgundy)}
+  .card.ready > .head{border-left-color:var(--green)}
+  .card.needs > .head{border-left-color:var(--gold)}
+  .who{font-weight:bold;font-size:1.02rem;margin:0 0 2px}
+  .role{color:var(--muted);font-size:.83rem;margin:0}
+  .tag{display:inline-block;font-size:.7rem;text-transform:uppercase;
+       letter-spacing:.06em;padding:2px 8px;border-radius:99px;margin-left:8px;
+       vertical-align:2px;font-weight:bold}
+  .tag.ready{background:#e6f4ec;color:var(--green)}
+  .tag.needs{background:#fdf3dd;color:var(--gold)}
+  .subject{padding:0 16px 10px;font-size:.9rem}
+  .subject b{color:var(--muted);font-weight:normal}
+  pre{margin:0;padding:14px 16px;background:#fbfbfa;border-top:1px solid var(--line);
+      white-space:pre-wrap;word-wrap:break-word;font-family:Arial,Helvetica,sans-serif;
+      font-size:.88rem;line-height:1.55;color:#242424;max-height:none}
+  .actions{display:flex;gap:8px;padding:12px 16px;border-top:1px solid var(--line);
+           background:#fff;flex-wrap:wrap}
+  button{font-family:inherit;font-size:.85rem;font-weight:bold;cursor:pointer;
+         border:1px solid var(--burgundy);background:#fff;color:var(--burgundy);
+         padding:9px 15px;border-radius:7px;transition:.12s;min-height:40px}
+  button:hover{background:var(--burgundy);color:#fff}
+  button.done{background:var(--green);border-color:var(--green);color:#fff}
+  footer{color:var(--muted);font-size:.78rem;text-align:center;margin-top:34px;
+         border-top:1px solid var(--line);padding-top:14px}
+  @media(max-width:520px){ body{padding:14px 10px 50px} h1{font-size:1.2rem} }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>SRED Outbox — coauthor invitations</h1>
+  <div class="sub">Suicide Research Evidence Database · created 27 Jul 2026 · nothing sent, nothing drafted in Gmail</div>
+</header>
+
+<div class="note">
+  Tap <b>Copy body</b>, paste into your mail client, edit the bracketed bits, send.
+  Cards marked <b>Needs a name</b> are templates: fill in the recipient and the
+  role sentence before sending. Related: the manuscript draft, the repository
+  archive, and the human-coding template delivered in this session.
+</div>
+
+<!-- 1 -->
+<div class="card ready">
+  <div class="head">
+    <p class="who">Brian E. Perron<span class="tag ready">Ready</span></p>
+    <p class="role">University of Michigan · author of the method this paper adapts · beperron@umich.edu</p>
+  </div>
+  <div class="subject"><b>Subject:</b> <span id="s1">Adapting the Social Work Research Database method to suicide research</span></div>
+  <pre id="b1">Dear Brian,
+
+I read your Research on Social Work Practice paper on 35 years of social work knowledge production, and it prompted me to build the equivalent infrastructure for suicide research. I am writing because the work follows your method closely enough that it would be strange not to tell you, and because I think you would improve it.
+
+The adaptation turned out to be less mechanical than I expected. Social work is defined by its journals; suicide research is not. There are roughly five dedicated suicidology journals in the world, so a venue-based corpus captures a small and biased slice of the field. I ended up with a hybrid: complete venue capture of the specialty journals plus a title-focused topical sweep across every other venue, with each record tagged by tier. That produced the finding I did not expect, which is that 5.1 percent of suicide research appears in dedicated suicidology journals, and that share has not moved since 1989.
+
+The corpus is 96,641 records from 1989 to 2025 across 5,863 journals, built entirely on PubMed, Europe PMC, OpenAlex, and NIH iCite, with no Web of Science or Scopus in any reported result. I diverged from you on classification: rather than a 20B local model, I used NLM PublicationType tags as distant supervision for a linear classifier, which let me validate against human indexing on tens of thousands of held-out records rather than a hundred. Hold-out kappa is 0.79 for empirical status and 0.95 for methodology. I have also shipped an Ollama backend that reproduces your design directly, and I would like to run both and report the comparison.
+
+I would be glad to have you as a coauthor. The contribution I have in mind is the scientometric framing and the comparison between the two fields, which is the part where your judgment is worth more than mine. If you would rather stay at arm's length and simply comment, that is also welcome, and I will acknowledge you either way.
+
+The draft, the code, and the data are ready to share whenever you would like to see them.
+
+Best,
+Yunyu
+
+Yunyu Xiao, PhD
+Assistant Professor, Population Health Sciences and Psychiatry
+Weill Cornell Medicine, Cornell University</pre>
+  <div class="actions">
+    <button onclick="cp('s1',this)">Copy subject</button>
+    <button onclick="cp('b1',this)">Copy body</button>
+  </div>
+</div>
+
+<!-- 2 -->
+<div class="card ready">
+  <div class="head">
+    <p class="who">Julian Chow<span class="tag ready">Ready</span></p>
+    <p class="role">UC Berkeley · community and equity lens, and the social work bridge · [email]</p>
+  </div>
+  <div class="subject"><b>Subject:</b> <span id="s2">SRG has been building something in SSG's home discipline</span></div>
+  <pre id="b2">Dear SSG,
+
+SRG has been building a database, and it started in your discipline rather than mine.
+
+Perron and colleagues published an analysis of 35 years of social work knowledge production earlier this year, built on a bibliographic database they constructed themselves. I have adapted their method to suicide research and prevention. The result is 96,641 records from 1989 to 2025 across 5,863 journals, classified by empirical status and methodology, and extended with fields no bibliographic database carries: where a study sits on the prevention continuum, which population it studies, which lethal means it addresses, and which social determinants of health it engages.
+
+Two findings are worth your eye in particular. Only 5.1 percent of suicide research appears in dedicated suicidology journals, so the field is structurally dispersed across its host disciplines and has been for 35 years. And only 8.9 percent of the corpus sits anywhere on the prevention continuum at all, with treatment-level research outweighing universal prevention by roughly sixteen to one. Most people who die by suicide are not in current psychiatric treatment, so that is a mismatch between where the effort goes and where the deaths are.
+
+The equity reading of these numbers is the part I am least confident about, and it is the part that matters most. Non-English scholarship and journals from low- and middle-income countries are under-represented in every source I used, which is precisely where the burden falls. I would be honored to have SSG's read on that, as a coauthor.
+
+Everything is open: code, data, and a draft that rebuilds its own numbers from the corpus.
+
+Best,
+Yunyu (SRG)</pre>
+  <div class="actions">
+    <button onclick="cp('s2',this)">Copy subject</button>
+    <button onclick="cp('b2',this)">Copy body</button>
+  </div>
+</div>
+
+<!-- 3 -->
+<div class="card needs">
+  <div class="head">
+    <p class="who">Suicide prevention / psychiatry coauthor<span class="tag needs">Needs a name</span></p>
+    <p class="role">Clinical and prevention-science framing · substantive interpretation of the prevention-continuum finding</p>
+  </div>
+  <div class="subject"><b>Subject:</b> <span id="s3">Invitation: a database of 35 years of suicide research, and what it shows about where the effort goes</span></div>
+  <pre id="b3">Dear [Name],
+
+I have built something I would like you to be part of, and I would rather show you the finding than describe the method first.
+
+Across 96,641 suicide research articles published between 1989 and 2025, only 8.9 percent sit anywhere on the public health prevention continuum. Within that portion, treatment-level research outweighs universal prevention by roughly sixteen to one. Most people who die by suicide are not in current psychiatric treatment, so the literature is concentrated where a minority of the deaths are. Separately, pesticide ingestion is among the leading global methods and accounts for 1.3 percent of the corpus, against 2.7 percent for firearms, a ratio that tracks research funding rather than mortality.
+
+The instrument behind those numbers is the Suicide Research Evidence Database, which adapts the method Perron and colleagues used for social work earlier this year. It integrates PubMed, Europe PMC, OpenAlex, and NIH iCite into a deduplicated corpus covering 5,863 journals, classifies each abstract by empirical status and methodology against human NLM indexing, and extracts fields no bibliographic database carries: prevention level, outcome construct, population, study design, lethal means, and social determinants of health. Everything is open and reproducible without a subscription.
+
+The contribution I have in mind for you is [ROLE: the clinical and prevention-science interpretation / the framing of the prevention-continuum and lethal-means findings / the treatment-research perspective], which is where the paper most needs a reader who works in the area rather than on the metadata.
+
+One caveat I want to state plainly rather than bury: the extraction fields are lexically derived in this version, so they are reliable in direction and approximate in magnitude. Upgrading them with a language model is the next step, and I would value your view on which fields deserve that effort first.
+
+The draft, the code, and the data are ready whenever you would like them.
+
+Best,
+Yunyu
+
+Yunyu Xiao, PhD
+Assistant Professor, Population Health Sciences and Psychiatry
+Weill Cornell Medicine, Cornell University</pre>
+  <div class="actions">
+    <button onclick="cp('s3',this)">Copy subject</button>
+    <button onclick="cp('b3',this)">Copy body</button>
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="card needs">
+  <div class="head">
+    <p class="who">Methods / informatics coauthor<span class="tag needs">Needs a name</span></p>
+    <p class="role">Classification validation, human double-coding, and the LLM comparison</p>
+  </div>
+  <div class="subject"><b>Subject:</b> <span id="s4">Invitation: classification validation for a 96,000-record suicide research database</span></div>
+  <pre id="b4">Dear [Name],
+
+I am writing to ask you to join a paper as a coauthor, with a specific and bounded job.
+
+The Suicide Research Evidence Database integrates PubMed, Europe PMC, OpenAlex, and NIH iCite into 96,641 deduplicated suicide research records spanning 1989 to 2025. Each abstract is classified in three stages, scientific communication, then empirical status, then methodology, following Perron and colleagues. Where they used a 20 billion parameter local model, I used NLM PublicationType tags as distant supervision for a calibrated linear classifier, which has the advantage that validation runs against human indexers on tens of thousands of held-out records rather than a hand-coded hundred.
+
+Hold-out kappa is 0.35 for scientific communication, 0.79 for empirical status, and 0.95 for methodology. Leave-one-decade-out kappa for empirical status ranges 0.71 to 0.81. The 0.35 is the honest weak point and I report it as such: requiring a substantive abstract removes almost all editorials and letters before classification runs, so what survives is by construction the non-scientific writing that reads like research.
+
+What I would like from you is the confirmatory human coding. There is a 300 record sample stratified by decade and predicted methodology, in a template with blank columns for an independent coder. Double-coding it is the one part of this the pipeline cannot do for itself, and it is what the manuscript will report as the confirmatory kappa. A second job, if you want it, is running the Ollama backend at corpus scale so we can report the language model and distant supervision label sets head to head on the same records.
+
+Everything is versioned and reproducible: code, config, data, and a manuscript that substitutes its own numbers from the analysis output at build time, so the prose cannot drift from the data.
+
+Best,
+Yunyu
+
+Yunyu Xiao, PhD
+Assistant Professor, Population Health Sciences and Psychiatry
+Weill Cornell Medicine, Cornell University</pre>
+  <div class="actions">
+    <button onclick="cp('s4',this)">Copy subject</button>
+    <button onclick="cp('b4',this)">Copy body</button>
+  </div>
+</div>
+
+<footer>SRED Outbox · created 27 Jul 2026 · no email sent, no Gmail draft created</footer>
+</div>
+
+<script>
+function cp(id, btn){
+  var el = document.getElementById(id);
+  var text = el.innerText;
+  var label = btn.textContent;
+  function done(){
+    btn.textContent = 'Copied';
+    btn.classList.add('done');
+    setTimeout(function(){ btn.textContent = label; btn.classList.remove('done'); }, 1600);
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done, function(){ fallback(text, done); });
+  } else {
+    fallback(text, done);
+  }
+}
+function fallback(text, done){
+  var ta = document.createElement('textarea');
+  ta.value = text;
+  ta.setAttribute('readonly','');
+  ta.style.position = 'fixed';
+  ta.style.top = '-1000px';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); done(); } catch(e) {}
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
