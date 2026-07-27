@@ -41,9 +41,9 @@ dev = ["pytest>=7.4", "pytest-cov>=4.1", "ruff>=0.4"]
 all = ["sred[postgres,dev]"]
 
 [project.urls]
-Homepage = "https://github.com/OWNER/suicide-research-evidence-database"
-Repository = "https://github.com/OWNER/suicide-research-evidence-database"
-Issues = "https://github.com/OWNER/suicide-research-evidence-database/issues"
+Homepage = "https://github.com/yunyu118/suicide-research-evidence-database"
+Repository = "https://github.com/yunyu118/suicide-research-evidence-database"
+Issues = "https://github.com/yunyu118/suicide-research-evidence-database/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]

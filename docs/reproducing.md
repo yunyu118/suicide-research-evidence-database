@@ -11,7 +11,7 @@ requires a paid database subscription, an API key, or a GPU.
   `api.openalex.org`
 
 ```bash
-git clone https://github.com/OWNER/suicide-research-evidence-database.git
+git clone https://github.com/yunyu118/suicide-research-evidence-database.git
 cd suicide-research-evidence-database
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"

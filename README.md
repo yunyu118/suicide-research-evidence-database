@@ -2,7 +2,7 @@
 
 **An open, reproducible bibliographic infrastructure for scientometric research on suicide and suicide prevention.**
 
-[![CI](https://github.com/OWNER/suicide-research-evidence-database/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/suicide-research-evidence-database/actions/workflows/ci.yml)
+[![CI](https://github.com/yunyu118/suicide-research-evidence-database/actions/workflows/ci.yml/badge.svg)](https://github.com/yunyu118/suicide-research-evidence-database/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/Code-MIT-blue.svg)](LICENSE)
 [![Data: CC BY 4.0](https://img.shields.io/badge/Data-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)
@@ -24,7 +24,7 @@ Three things make it different from a bibliometric extract:
 ## Quick start
 
 ```bash
-git clone https://github.com/OWNER/suicide-research-evidence-database.git
+git clone https://github.com/yunyu118/suicide-research-evidence-database.git
 cd suicide-research-evidence-database
 pip install -e ".[dev]"
 export SRED_MAILTO="you@example.edu"
