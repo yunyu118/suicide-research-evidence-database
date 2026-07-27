@@ -17,7 +17,11 @@
       1989,
       2022
     ],
-    "citation_accrual_years_min": 3
+    "citation_accrual_years_min": 3,
+    "n_partial_year_records": 4670,
+    "partial_years": [
+      2026
+    ]
   },
   "growth": {
     "first_year": 1989,

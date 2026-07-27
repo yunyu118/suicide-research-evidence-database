@@ -88,6 +88,13 @@ def main() -> int:
             "citation_window": [baseline, cite_end],
             "citation_accrual_years_min":
                 int(cfg["date_range"].get("citation_accrual_years_min", 0)),
+            # Years beyond trend_end are held in the corpus but kept off every
+            # trend line. Reporting the count makes that explicit rather than
+            # leaving a reader to infer it from a gap in a figure.
+            "n_partial_year_records":
+                int((df["year"] > trend_end).sum()),
+            "partial_years": sorted(int(y) for y in
+                                    df.loc[df["year"] > trend_end, "year"].unique()),
         }
     }
 

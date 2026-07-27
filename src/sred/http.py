@@ -37,7 +37,9 @@ _HOST_RATE = {
     "doaj.org": 1.5,
     "icite.od.nih.gov": 4.0,
     "api.elsevier.com": 5.0,
-    "api.clarivate.com": 1.0,
+    # Clarivate publishes 5 req/sec on the Starter API and returns the budget
+    # in x-ratelimit-remaining-day. 4/s leaves headroom for their burst window.
+    "api.clarivate.com": 4.0,
 }
 _DEFAULT_RATE = 2.0
 
