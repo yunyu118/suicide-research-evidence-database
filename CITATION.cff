@@ -15,9 +15,10 @@ authors:
   - family-names: Xiao
     given-names: Yunyu
     affiliation: >-
-      Weill Cornell Medicine, Cornell University
+      Department of Population Health Sciences, Weill Cornell Medicine,
+      Cornell University
     email: kathyxiao118@gmail.com
-    # orcid: "https://orcid.org/0000-0000-0000-0000"   # TODO: add before release
+    orcid: "https://orcid.org/0000-0002-0479-1781"
 
 abstract: >-
   SRED is an open, fully reproducible bibliographic infrastructure for the

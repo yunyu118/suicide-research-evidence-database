@@ -2,7 +2,7 @@
 
 **Running head:** Suicide Research Evidence Database
 
-**Authors:** Yunyu Xiao¹ [ORCID], [Coauthor 2]², [Coauthor 3]³, [Coauthor 4]⁴
+**Authors:** Yunyu Xiao¹ (ORCID 0000-0002-0479-1781), [Coauthor 2]², [Coauthor 3]³, [Coauthor 4]⁴
 
 ¹ Department of Population Health Sciences, Weill Cornell Medicine, Cornell University, New York, NY, USA
 ² [Affiliation]
