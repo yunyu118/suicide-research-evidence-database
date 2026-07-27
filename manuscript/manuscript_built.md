@@ -11,7 +11,7 @@
 
 **Corresponding author:** Yunyu Xiao, Weill Cornell Medicine, 575 Lexington Avenue, New York, NY 10022, USA. Email: [email]
 
-**Word count:** [auto]
+**Word count:** ~5965 (abstract through conclusion)
 **Tables:** 4 | **Figures:** 8 | **Supplementary files:** 5
 
 ---
