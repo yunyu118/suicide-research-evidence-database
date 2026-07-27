@@ -57,3 +57,10 @@ manuscript/*.blg
 #   python -m sred.db.load --engine duckdb --out data/releases/sred.duckdb
 data/releases/*.duckdb
 data/releases/*.duckdb.gz
+
+# Coding key and completed coder workbooks: the key must never be committed,
+# and filled workbooks contain individual RAs' work.
+data/coding/_scoring_key*.csv
+data/coding/human_consensus.csv
+data/coding/SRED_adjudication.xlsx
+data/coding/reliability_report.json
