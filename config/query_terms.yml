@@ -1,0 +1,241 @@
+# Topical screen for the Suicide Research Evidence Database (SRED)
+#
+# Suicide research, unlike social work, is a TOPIC-defined rather than a
+# VENUE-defined field. SRED therefore combines a venue-based core (see
+# journals_core.yml) with a topical sweep across all other venues.
+#
+# Design principles
+#   1. Recall-first at harvest, precision-enforced at screening. We harvest
+#      broadly, then apply the exclusion rules below.
+#   2. Controlled vocabulary is preferred where it exists (MeSH in PubMed);
+#      free-text is the fallback for records lacking indexing.
+#   3. Every exclusion rule is logged per-record so screening decisions are
+#      auditable and reversible.
+
+date_range:
+  start: "1989-01-01"
+  end: "2025-12-31"
+  # Trend analyses truncate at 2023 to avoid the incomplete-indexing
+  # artefact at the recent boundary (parallels Perron et al., 2026).
+  trend_end_year: 2023
+  baseline_year: 1989
+
+pubmed:
+  # Controlled-vocabulary spine. Explosion is ON for these descriptors.
+  mesh_terms:
+    - "Suicide"                       # explodes to Suicide, Attempted; Suicide, Completed; Suicidal Ideation
+    - "Suicidal Ideation"
+    - "Self-Injurious Behavior"       # explodes to Self Mutilation etc.
+    - "Suicide Prevention"
+  # Free-text supplement for records not yet MeSH-indexed (in-process
+  # citations) and for concepts MeSH handles poorly.
+  title_abstract_terms:
+    - "suicid*"
+    - "self-harm"
+    - "self harm"
+    - "self-injur*"
+    - "para-suicide"
+    - "parasuicide"
+    - "non-suicidal self-injury"
+    - "NSSI"
+    - "deliberate self-poisoning"
+
+openalex:
+  # OpenAlex has no controlled vocabulary equivalent to MeSH; we use
+  # title_and_abstract.search with a curated term set, then screen.
+  search_terms:
+    - "suicide"
+    - "suicidal"
+    - "suicidality"
+    - "suicidology"
+    - "self-harm"
+    - "self-injury"
+    - "parasuicide"
+  # Concept/topic filters used as a secondary recall channel.
+  topic_ids: []          # resolved at build time
+  restrict_types: ["article", "review"]
+  # Topic delineation field. "title" = precision-oriented (work *about*
+  # suicide); "title_and_abstract" = recall-oriented (work that *mentions*
+  # suicide). SRED's primary corpus uses "title"; the recall variant is run
+  # only for the coverage sensitivity analysis reported in the manuscript.
+  delineation_field: title
+  require_abstract: true
+
+europepmc:
+  # Europe PMC has no request budget, so it is SRED's rebuildable backbone.
+  # Same term set and same title-based delineation as the OpenAlex channel,
+  # which makes the two directly comparable for the coverage analysis.
+  search_terms:
+    - "suicide"
+    - "suicidal"
+    - "suicidality"
+    - "suicidology"
+    - "self-harm"
+    - "self-injury"
+    - "parasuicide"
+    - "non-suicidal self-injury"
+  delineation_field: TITLE
+  require_abstract: true
+
+# ---------------------------------------------------------------------
+# Exclusion rules. Each rule emits a machine-readable reason code that is
+# written to papers.screen_reason so the decision trail is inspectable.
+# ---------------------------------------------------------------------
+exclusions:
+  # Metaphorical / non-clinical uses of "suicide" that dominate false
+  # positives in an unscreened suicide query.
+  metaphorical_phrases:
+    - "suicide gene"
+    - "suicide substrate"
+    - "suicide inhibitor"
+    - "suicide inhibition"
+    - "suicide enzyme"
+    - "suicidal inactivation"
+    - "suicide bag"
+    - "cell suicide"
+    - "apoptosis"          # only when co-occurring with 'suicide gene/substrate'
+    - "suicide gene therapy"
+    - "political suicide"
+    - "economic suicide"
+    - "career suicide"
+    - "suicide squeeze"
+    - "suicide bomb"       # terrorism-as-tactic; see keep_if_also below
+    - "suicide bomber"
+    - "suicide attack"
+    - "suicide terrorism"
+    - "suicide mission"
+    - "suicide gene expression"
+    - "suicidal DNA"
+    - "suicide door"
+
+  # A record matching a metaphorical phrase is RETAINED if it also matches
+  # one of these behavioural-health markers (e.g. a study of the mental
+  # health of survivors of suicide bombings).
+  keep_if_also:
+    - "suicidal ideation"
+    - "suicide attempt"
+    - "suicide risk"
+    - "suicide rate"
+    - "suicide prevention"
+    - "self-harm"
+    - "psychiatric"
+    - "mental health"
+    - "depression"
+    - "psychological autopsy"
+
+  # Document types excluded from the scientific-communication corpus.
+  # Mirrors Perron et al.'s first classification stage.
+  non_scientific_types:
+    - "editorial"
+    - "letter"
+    - "comment"
+    - "erratum"
+    - "correction"
+    - "retraction"
+    - "book-review"
+    - "news"
+    - "obituary"
+    - "biography"
+    - "peer-review"
+    - "paratext"
+    - "poetry"
+
+  min_abstract_chars: 150
+  require_abstract: true
+
+# ---------------------------------------------------------------------
+# Suicide-specific extraction schema. This is SRED's substantive extension
+# beyond the Perron template: fields that matter for suicide prevention
+# science but that no bibliographic database captures.
+# ---------------------------------------------------------------------
+extraction_fields:
+
+  prevention_level:
+    description: >-
+      Position of the study on the public-health prevention continuum.
+    values: [universal, selective, indicated, treatment, postvention, not_applicable]
+
+  outcome_construct:
+    description: >-
+      Primary suicide-related outcome studied. Multi-label.
+    values:
+      - suicide_death
+      - suicide_attempt
+      - suicidal_ideation
+      - non_suicidal_self_injury
+      - self_harm_undifferentiated
+      - suicide_risk_composite
+      - suicide_bereavement
+      - attitudes_or_stigma
+      - service_use_or_care_process
+      - not_specified
+
+  population:
+    description: Primary study population. Multi-label.
+    values:
+      - general_population
+      - youth_adolescent
+      - older_adult
+      - veteran_military
+      - clinical_psychiatric
+      - primary_care
+      - justice_involved
+      - lgbtq
+      - indigenous
+      - racial_ethnic_minority
+      - rural
+      - occupational
+      - perinatal
+      - other
+
+  study_design:
+    description: Design for empirical work; refines the methodology class.
+    values:
+      - rct
+      - quasi_experimental
+      - cohort_prospective
+      - case_control
+      - cross_sectional
+      - ecological_timeseries
+      - registry_linkage
+      - psychological_autopsy
+      - qualitative_interview
+      - qualitative_other
+      - mixed_methods
+      - systematic_review_meta_analysis
+      - scoping_narrative_review
+      - simulation_modelling
+      - psychometric
+      - other
+
+  sdoh_focus:
+    description: >-
+      Whether the study examines a social determinant of health as an
+      exposure, moderator, or intervention target. SRED-specific field
+      motivated by the SDoH literature.
+    values: [true, false]
+
+  sdoh_domain:
+    description: Which SDoH domain, when sdoh_focus is true. Multi-label.
+    values:
+      - economic_stability
+      - education_access
+      - healthcare_access
+      - neighborhood_environment
+      - social_community_context
+      - discrimination_racism
+      - housing_homelessness
+      - food_insecurity
+      - incarceration
+      - immigration_status
+      - firearm_access_means
+      - digital_social_media
+      - none
+
+  means_focus:
+    description: Whether the study addresses lethal means / method of suicide.
+    values: [firearm, poisoning_overdose, pesticide, hanging, jumping, drowning, other, none]
+
+  geography:
+    description: ISO-3166 alpha-2 country of the study population, or "multi".
+    values: free_text

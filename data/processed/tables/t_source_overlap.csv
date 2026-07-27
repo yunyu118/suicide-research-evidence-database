@@ -1,0 +1,14 @@
+source_combination,n,pct,n_sources
+pubmed,47064,48.7,1
+europepmc+pubmed,35671,36.91,2
+europepmc,6961,7.2,1
+europepmc+pubmed+openalex,4104,4.25,3
+openalex,833,0.86,1
+europepmc+europepmc+pubmed,811,0.84,3
+openalex+pubmed,660,0.68,2
+europepmc+openalex+pubmed,285,0.29,3
+europepmc+openalex,215,0.22,2
+europepmc+pubmed+openalex+openalex,17,0.02,4
+europepmc+europepmc+pubmed+openalex,14,0.01,4
+openalex+openalex+pubmed,5,0.01,3
+europepmc+europepmc+europepmc+pubmed,1,0.0,4

@@ -1,0 +1,66 @@
+cff-version: 1.2.0
+title: >-
+  Suicide Research Evidence Database (SRED): An Open Bibliographic
+  Infrastructure for Scientometric Research on Suicide and Suicide Prevention
+message: >-
+  If you use this database, code, or derived data, please cite both the
+  software (this file) and the accompanying article.
+type: software
+version: 1.0.0
+date-released: "2026-07-27"
+license: MIT
+repository-code: "https://github.com/OWNER/suicide-research-evidence-database"
+
+authors:
+  - family-names: Xiao
+    given-names: Yunyu
+    affiliation: >-
+      Weill Cornell Medicine, Cornell University
+    email: kathyxiao118@gmail.com
+    # orcid: "https://orcid.org/0000-0000-0000-0000"   # TODO: add before release
+
+abstract: >-
+  SRED is an open, fully reproducible bibliographic infrastructure for the
+  study of suicide research knowledge production. It integrates PubMed/MEDLINE,
+  Europe PMC, and OpenAlex into a deduplicated corpus of suicide-focused
+  scholarship published between 1989 and 2025, combining a venue-based core of
+  dedicated suicidology journals with a topical sweep across all other
+  publication venues. Abstracts are classified by scientific communication
+  type, empirical status, and research methodology using a distantly
+  supervised classifier trained on human MEDLINE indexing, with an
+  interchangeable local large language model backend. SRED additionally
+  extracts suicide-specific fields absent from every existing bibliographic
+  database: position on the prevention continuum, suicide-related outcome
+  construct, study population, study design, lethal means focus, and social
+  determinants of health.
+
+keywords:
+  - suicide
+  - suicide prevention
+  - suicidology
+  - bibliometrics
+  - scientometrics
+  - social determinants of health
+  - open science
+  - health informatics
+  - large language models
+
+references:
+  - type: article
+    title: >-
+      Evolution of Social Work Knowledge Production Over 35 Years: An
+      AI-Enabled Analysis of Trends in Empiricism, Methodology, Collaboration,
+      Citation Patterns, and Output
+    authors:
+      - family-names: Perron
+        given-names: Brian E.
+      - family-names: Victor
+        given-names: Bryan G.
+      - family-names: Qi
+        given-names: Zia
+    journal: Research on Social Work Practice
+    year: 2026
+    doi: 10.1177/10497315261416833
+    notes: >-
+      The methodological template SRED adapts from social work to suicide
+      research and prevention.

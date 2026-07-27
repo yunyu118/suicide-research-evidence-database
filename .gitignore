@@ -1,0 +1,59 @@
+# --- SRED artefacts -------------------------------------------------------
+# Raw harvests and the HTTP cache are large and fully reproducible from the
+# pipeline, so they are not versioned. Released data products under
+# data/releases/ ARE versioned - see docs/data-releases.md.
+data/raw/
+data/interim/
+data/processed/*.parquet
+logs/*.log
+logs/*.out
+
+!data/releases/
+!data/processed/results.json
+!data/processed/tables/
+
+# --- credentials ----------------------------------------------------------
+.env
+.env.*
+*.key
+secrets/
+config/local.yml
+
+# --- Python ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.tox/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# --- editors / OS ---------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# --- notebooks ------------------------------------------------------------
+.ipynb_checkpoints/
+
+# --- manuscript build -----------------------------------------------------
+manuscript/*.aux
+manuscript/*.log
+manuscript/*.out
+manuscript/*.bbl
+manuscript/*.blg
+
+# Full DuckDB database: 270 MB, published as a GitHub Release asset instead of
+# committed. Rebuild locally with:
+#   python -m sred.db.load --engine duckdb --out data/releases/sred.duckdb
+data/releases/*.duckdb
+data/releases/*.duckdb.gz

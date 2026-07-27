@@ -1,0 +1,83 @@
+# Core specialty venues for the Suicide Research Evidence Database (SRED)
+#
+# TIER A ("core suicidology"): journals whose stated scope is suicide,
+#   suicidal behaviour, self-harm, and/or suicide prevention. Every article
+#   in these venues is treated as disciplinary suicidology scholarship,
+#   following the venue-based logic of Perron, Victor & Qi (2026).
+#
+# TIER B ("adjacent thanatology / crisis"): journals whose scope is death,
+#   dying, bereavement, loss, or crisis intervention. These publish
+#   substantial suicide scholarship but are NOT suicide-specific, so records
+#   from Tier B enter SRED only when they also satisfy the topical screen.
+#
+# Coverage note: ISSN-L is the join key. `openalex_id` is resolved at build
+# time and cached in data/interim/source_resolution.json.
+
+tier_a:
+  - name: Suicide and Life-Threatening Behavior
+    issn_l: "0363-0234"
+    publisher: Wiley
+    society: American Association of Suicidology
+    founded: 1971
+    notes: >-
+      Flagship journal of suicidology. Continues the journal "Suicide"
+      (ISSN 0360-1390, 1971-1975). Renamed in 1976.
+    predecessor_issn: "0360-1390"
+
+  - name: Archives of Suicide Research
+    issn_l: "1381-1118"
+    publisher: Taylor & Francis
+    society: International Academy of Suicide Research
+    founded: 1995
+
+  - name: "Crisis: The Journal of Crisis Intervention and Suicide Prevention"
+    issn_l: "0227-5910"
+    publisher: Hogrefe
+    society: International Association for Suicide Prevention
+    founded: 1980
+
+  - name: Suicidology Online
+    issn_l: "2078-5488"
+    publisher: Independent / open access
+    society: null
+    founded: 2010
+    status: ceased
+    notes: >-
+      Open-access, no APC. Ceased publication ~2020. Systematically absent
+      from Web of Science and Scopus; included here specifically to test the
+      indexing-gap hypothesis.
+
+  - name: Journal of Suicidology
+    issn_l: "2951-1917"
+    publisher: Korean Association for Suicide Prevention
+    society: Korean Association for Suicide Prevention
+    founded: 2023
+    notes: >-
+      Regional specialty journal with minimal commercial indexing coverage.
+      Resolved by title search where ISSN lookup fails.
+
+tier_b:
+  - name: Death Studies
+    issn_l: "0748-1187"
+    publisher: Taylor & Francis
+    founded: 1977
+
+  - name: OMEGA - Journal of Death and Dying
+    issn_l: "0030-2228"
+    publisher: SAGE
+    founded: 1970
+
+  - name: Mortality
+    issn_l: "1357-6275"
+    publisher: Taylor & Francis
+    founded: 1996
+
+  - name: Illness Crisis & Loss
+    issn_l: "1054-1373"
+    publisher: SAGE
+    founded: 1991
+
+  - name: Bereavement Care
+    issn_l: "0268-2621"
+    publisher: Taylor & Francis
+    founded: 1982
