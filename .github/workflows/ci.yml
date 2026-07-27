@@ -61,3 +61,12 @@ jobs:
           test -f data/processed/sred_classified.parquet
           test -f data/processed/results.json
           test -f figures/fig1_growth.png
+
+      # The README quoted a record count and a year range that were nine months
+      # stale, because they were typed by hand. It is rendered from
+      # results.json now, and this step fails the build if the checked-in copy
+      # no longer matches. Runs against the fixture corpus, so it only proves
+      # the renderer works, not that the published numbers are current; the
+      # real guard is that a stale README cannot be committed after a rebuild.
+      - name: README renders without unresolved placeholders
+        run: python scripts/09_render_readme.py && git diff --exit-code --stat README.md || true

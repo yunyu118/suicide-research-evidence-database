@@ -2,7 +2,7 @@
 
 **An open, reproducible bibliographic infrastructure for scientometric research on suicide and suicide prevention.**
 
-**103,528 records · 1989 to 2026 · 6,459 journals · trends reported to 2025**
+**{{corpus.n_records|,}} records · {{corpus.year_min}} to {{corpus.year_max}} · {{corpus.n_journals|,}} journals · trends reported to {{corpus.trend_window[1]}}**
 
 [![CI](https://github.com/yunyu118/suicide-research-evidence-database/actions/workflows/ci.yml/badge.svg)](https://github.com/yunyu118/suicide-research-evidence-database/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/Code-MIT-blue.svg)](LICENSE)
@@ -13,7 +13,7 @@
 
 ## What this is
 
-SRED is a deduplicated, classified corpus of suicide-focused scholarship published between 1989 and 2026, together with the complete pipeline that builds it. It adapts the methodology of Perron, Victor & Qi ([2026](https://doi.org/10.1177/10497315261416833)), who built the Social Work Research Database, from social work to suicide research and prevention.
+SRED is a deduplicated, classified corpus of suicide-focused scholarship published between {{corpus.year_min}} and {{corpus.year_max}}, together with the complete pipeline that builds it. It adapts the methodology of Perron, Victor & Qi ([2026](https://doi.org/10.1177/10497315261416833)), who built the Social Work Research Database, from social work to suicide research and prevention.
 
 Three things make it different from a bibliometric extract:
 
@@ -51,7 +51,7 @@ con.sql("""
     SELECT publication_year, COUNT(*) AS n,
            ROUND(AVG(CASE WHEN sdoh_focus THEN 1.0 ELSE 0 END) * 100, 1) AS pct_sdoh
     FROM v_analytic_corpus
-    WHERE publication_year BETWEEN 1990 AND 2025
+    WHERE publication_year BETWEEN 1990 AND {{corpus.trend_window[1]}}
     GROUP BY 1 ORDER BY 1
 """).show()
 ```
@@ -95,7 +95,7 @@ tests/           unit tests + a synthetic fixture corpus so CI never touches liv
 
 **Authors are not disambiguated.** `n_authors` and author strings are surface forms; ORCID is the only identifier treated as authoritative. Counting distinct author strings will overcount distinct people. This is the same decision, for the same reason, that Perron et al. made: entity resolution done partially produces confidently wrong collaboration networks. See [`docs/data-dictionary.md`](docs/data-dictionary.md).
 
-**Citation counts are open-source counts** (OpenAlex, Europe PMC, iCite). They are systematically *different* from Web of Science figures, not merely smaller, and should not be compared against them directly. iCite additionally supplies the **Relative Citation Ratio**, which is field- and time-normalised and far more interpretable across a corpus spanning 36 years and a dozen disciplines.
+**Citation counts are open-source counts** (OpenAlex, Europe PMC, iCite). They are systematically *different* from Web of Science figures, not merely smaller, and should not be compared against them directly. iCite additionally supplies the **Relative Citation Ratio**, which is field- and time-normalised and far more interpretable across a corpus spanning {{corpus.span_years}} years and a dozen disciplines.
 
 **Topic delineation prioritises precision.** A record is included topically when suicide is a *principal* subject: in the title, or flagged by an NLM indexer as a major MeSH topic. A recall-oriented query returns roughly three times as many records, but the extra yield is overwhelmingly studies where suicidality is one outcome among many. Those records are retained and flagged `peripheral` rather than discarded.
 
