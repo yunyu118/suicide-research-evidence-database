@@ -34,6 +34,12 @@ TABLES = PROCESSED / "tables"
 FIGURES = ROOT / "figures"
 INTERIM = ROOT / "data" / "interim"
 
+# Log directory must exist before logging is configured. Git does not track
+# empty directories, so a fresh clone has no logs/ and FileHandler would raise
+# FileNotFoundError before the first line of work. This bit CI on the very
+# first run, which is exactly what CI is for.
+(ROOT / "logs").mkdir(parents=True, exist_ok=True)
+
 logging.basicConfig(level=logging.INFO,
                     format="%(asctime)s %(levelname)-7s %(name)s | %(message)s",
                     handlers=[logging.StreamHandler(sys.stdout),
