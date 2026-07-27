@@ -24,8 +24,8 @@ import logging
 import re
 import urllib.parse
 import xml.etree.ElementTree as ET
+from collections.abc import Iterator
 from datetime import datetime, timezone
-from typing import Iterator
 
 from ..http import get_text
 from ..schema import Paper, normalize_doi

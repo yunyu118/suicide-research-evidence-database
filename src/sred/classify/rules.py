@@ -20,6 +20,7 @@ from __future__ import annotations
 import re
 from typing import Any
 
+
 def _rx(*alts: str) -> re.Pattern[str]:
     return re.compile("|".join(alts), re.I)
 

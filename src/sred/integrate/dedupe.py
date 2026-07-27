@@ -28,7 +28,8 @@ import logging
 import re
 import unicodedata
 from collections import defaultdict
-from typing import Any, Iterable
+from collections.abc import Iterable
+from typing import Any
 
 from rapidfuzz import fuzz
 
@@ -194,8 +195,8 @@ def deduplicate(records: Iterable[dict]) -> tuple[list[dict], dict[str, Any]]:
     state exactly how many merges were automatic versus flagged.
     """
     by_id: dict[str, dict] = {}
-    stats = Counter_ = {"input": 0, "doi_merge": 0, "pmid_merge": 0,
-                        "fuzzy_merge": 0, "review_flagged": 0}
+    stats = {"input": 0, "doi_merge": 0, "pmid_merge": 0,
+             "fuzzy_merge": 0, "review_flagged": 0}
     review_pairs: list[dict] = []
 
     # --- Pass 1: identifier-based collapse (DOI, then PMID) ---------------

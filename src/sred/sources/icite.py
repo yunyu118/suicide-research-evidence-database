@@ -27,7 +27,7 @@ human/animal/molecular-cellular research-level triple.
 from __future__ import annotations
 
 import logging
-from typing import Iterable, Iterator
+from collections.abc import Iterable, Iterator
 
 from ..http import get_json
 

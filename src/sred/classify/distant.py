@@ -39,14 +39,14 @@ from __future__ import annotations
 
 import logging
 from dataclasses import dataclass
-from typing import Any, Iterable
+from typing import Any
 
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
-from sklearn.multiclass import OneVsRestClassifier
 from sklearn.metrics import classification_report, cohen_kappa_score
 from sklearn.model_selection import GroupKFold
+from sklearn.multiclass import OneVsRestClassifier
 from sklearn.pipeline import Pipeline
 
 log = logging.getLogger(__name__)
@@ -178,7 +178,7 @@ class DistantClassifier:
                  name, len(y), res.classes, kappa, res.report["cv_accuracy"])
         return res
 
-    def fit(self, records: list[dict]) -> "DistantClassifier":
+    def fit(self, records: list[dict]) -> DistantClassifier:
         """Train all three stages from composite distant-supervision labels.
 
         Training consumes ``label_*`` fields produced by

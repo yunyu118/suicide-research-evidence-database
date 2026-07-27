@@ -14,6 +14,7 @@ stale numbers behind in the prose.
 
 from __future__ import annotations
 
+import contextlib
 import json
 import logging
 import sys
@@ -195,10 +196,8 @@ def main() -> int:
                  "validation_report", "classifier_summary"):
         p = INTERIM / f"{name}.json"
         if p.exists():
-            try:
+            with contextlib.suppress(json.JSONDecodeError):
                 R[name] = json.loads(p.read_text())
-            except json.JSONDecodeError:
-                pass
     # Convenience roll-ups the manuscript cites directly.
     prev = {r["prevention_level"]: r["pct"] for r in R.get("prevention_level_overall", [])}
     R["prevention_assignable_pct"] = round(100 - prev.get("not_applicable", 0), 1)

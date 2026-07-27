@@ -106,7 +106,7 @@ def run_openalex_venue(journals: dict, terms: dict) -> None:
     resolution = {}
     for tier_key, tier_label in (("tier_a", "core_a"), ("tier_b", "adjacent_b")):
         for j in journals.get(tier_key) or []:
-            issn = j.get("issn_l")
+            issn = j.get("issn_l")  # noqa: B007 - used below via `use_issn`
             name = j["name"]
             src = openalex.resolve_source(issn or name, mailto=MAILTO)
             resolution[name] = {

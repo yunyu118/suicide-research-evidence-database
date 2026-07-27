@@ -31,8 +31,7 @@ from typing import Any
 
 import numpy as np
 import pandas as pd
-from sklearn.metrics import (classification_report, cohen_kappa_score,
-                             confusion_matrix)
+from sklearn.metrics import classification_report, cohen_kappa_score, confusion_matrix
 
 log = logging.getLogger(__name__)
 

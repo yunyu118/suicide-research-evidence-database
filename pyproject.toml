@@ -66,5 +66,12 @@ select = ["E", "F", "W", "I", "UP", "B", "C4", "SIM"]
 ignore = ["E501", "B905"]
 
 [tool.ruff.lint.per-file-ignores]
-"scripts/*" = ["E402"]
+"scripts/*" = ["E402", "E712", "SIM108"]
 "src/sred/classify/rules.py" = ["E501"]
+# `x == True` is not redundant on a pandas nullable boolean column: `is True`
+# is wrong and bare truthiness treats <NA> as False, which silently folds
+# "unclassified" into "not empirical".
+"src/sred/analysis/metrics.py" = ["E712", "SIM108"]
+# Label accumulation reads better as aligned one-liners than as 3x the lines.
+"src/sred/classify/distant.py" = ["E702"]
+"src/sred/sources/scopus.py" = ["E741"]

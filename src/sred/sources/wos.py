@@ -20,8 +20,8 @@ from __future__ import annotations
 import logging
 import os
 import urllib.parse
+from collections.abc import Iterator
 from datetime import datetime, timezone
-from typing import Iterator
 
 from ..http import get_json
 from ..schema import Paper, normalize_doi

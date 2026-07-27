@@ -82,7 +82,7 @@ class JournalNormalizer:
         self._display_votes: dict[str, Counter[str]] = defaultdict(Counter)
 
     # -- learning pass -----------------------------------------------------
-    def fit(self, records) -> "JournalNormalizer":
+    def fit(self, records) -> JournalNormalizer:
         """Learn canonical titles from the corpus.
 
         The canonical display form for a journal is the *most frequently
@@ -113,7 +113,7 @@ class JournalNormalizer:
                 self.key_to_canonical[k] = best(ctr)
 
         # An ISSN's canonical title should also claim its own key.
-        for issn, canon in self.issn_to_canonical.items():
+        for canon in self.issn_to_canonical.values():
             self.key_to_canonical.setdefault(title_key(canon), canon)
 
         log.info("normalizer fitted: %d ISSNs, %d title keys",

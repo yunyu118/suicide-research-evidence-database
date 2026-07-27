@@ -35,8 +35,9 @@ import json
 import logging
 import re
 import urllib.request
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
 log = logging.getLogger(__name__)
 
@@ -181,7 +182,7 @@ class OllamaClassifier:
             return {"label": "uncertain", "confidence": 0.0, "rationale": f"error: {e}"}
 
     # -- public API --------------------------------------------------------
-    def fit(self, records: Iterable[dict]) -> "OllamaClassifier":
+    def fit(self, records: Iterable[dict]) -> OllamaClassifier:
         """No-op: an LLM classifier is zero-shot. Present for interface parity."""
         return self
 
