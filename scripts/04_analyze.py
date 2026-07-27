@@ -63,6 +63,10 @@ def main() -> int:
         cfg = yaml.safe_load(fh)
     trend_end = int(cfg["date_range"]["trend_end_year"])
     baseline = int(cfg["date_range"]["baseline_year"])
+    # Two clocks. trend_end governs anything counted at publication; cite_end
+    # governs anything counted afterwards. Conflating them makes recent papers
+    # look uninfluential when they are merely recent.
+    cite_end = int(cfg["date_range"].get("citation_end_year", trend_end))
 
     df = pd.read_parquet(src)
     df = df[df["year"].notna()].copy()
@@ -81,6 +85,9 @@ def main() -> int:
             "pct_with_doi": round(float(df["doi"].notna().mean() * 100), 2),
             "pct_with_citations": round(float(df["cited_by_count"].notna().mean() * 100), 2),
             "trend_window": [baseline, trend_end],
+            "citation_window": [baseline, cite_end],
+            "citation_accrual_years_min":
+                int(cfg["date_range"].get("citation_accrual_years_min", 0)),
         }
     }
 
@@ -132,21 +139,21 @@ def main() -> int:
     }
 
     # --- citations --------------------------------------------------------
-    R["citations"] = M.citation_summary(df, trend_end)
-    jt = M.citations_by_journal(df, trend_end, min_papers=25)
+    R["citations"] = M.citation_summary(df, cite_end)
+    jt = M.citations_by_journal(df, cite_end, min_papers=25)
     save_table(jt, "t_citations_by_journal")
     save_table(jt.head(60), "t1_top_journals")
-    cm = M.citations_by_methodology(df, trend_end)
+    cm = M.citations_by_methodology(df, cite_end)
     save_table(cm, "t_citations_by_methodology")
     R["citations_by_methodology"] = cm.to_dict("records")
-    unc = M.uncited_by_year(df, trend_end)
+    unc = M.uncited_by_year(df, cite_end)
     save_table(unc, "t_uncited_by_year")
 
     spec = df[df["venue_tier"] == "core_a"]
     if len(spec) and spec["cited_by_count"].notna().any():
         R["citations_specialty_vs_dispersed"] = {
-            "specialty": M.citation_summary(spec, trend_end),
-            "dispersed": M.citation_summary(df[df["venue_tier"] == "dispersed"], trend_end),
+            "specialty": M.citation_summary(spec, cite_end),
+            "dispersed": M.citation_summary(df[df["venue_tier"] == "dispersed"], cite_end),
         }
 
     # --- SRED-specific ----------------------------------------------------

@@ -87,6 +87,10 @@ def main() -> int:
 
     trend_end = R["corpus"]["trend_window"][1]
     baseline = R["corpus"]["trend_window"][0]
+    # Citation checks use the citation window, not the trend window. Verifying
+    # them against trend_end would confirm a number the analysis never
+    # computed, which is the failure mode this script exists to catch.
+    cite_end = R["corpus"].get("citation_window", [baseline, trend_end])[1]
 
     # --- 1. corpus --------------------------------------------------------
     c.check("corpus.n_records", len(df) == R["corpus"]["n_records"],
@@ -163,7 +167,7 @@ def main() -> int:
             "non-positive author counts present")
 
     # --- 6. citations -----------------------------------------------------
-    cit = df[(df["year"] <= trend_end) & df["cited_by_count"].notna()]
+    cit = df[(df["year"] <= cite_end) & df["cited_by_count"].notna()]
     if len(cit) and R.get("citations"):
         vals = cit["cited_by_count"].astype(float)
         c.close("citations.mean", float(vals.mean()),

@@ -23,13 +23,22 @@ const FONT = "Arial";          // Yunyu's standing preference for all documents
 const BODY_SIZE = 22;          // half-points => 11 pt
 const LETTER = { width: 12240, height: 15840 };   // DXA, US Letter
 
+// Figure captions carry the trend window, which is set in config and can
+// change when the corpus is re-harvested. Reading it from results.json rather
+// than typing it here is the same rule the manuscript text follows: a number
+// that appears in two places will eventually disagree with itself.
+const RESULTS = JSON.parse(
+  fs.readFileSync(path.join(ROOT, "data", "processed", "results.json"), "utf8"));
+const [TREND_START, TREND_END] = RESULTS.corpus.trend_window;
+const WIN = `${TREND_START}-${TREND_END}`;
+
 const FIGURES = [
-  ["fig1_growth", "Figure 1. Growth in suicide research output and publishing venues, 1989-2023."],
-  ["fig2_empiricism", "Figure 2. Evolution of empirical and non-empirical suicide scholarship, 1989-2023."],
-  ["fig3_methodology", "Figure 3. Distribution of research methodologies in empirical suicide research, 1989-2023."],
-  ["fig4_collaboration", "Figure 4. Trends in collaborative authorship in suicide research, 1989-2023."],
+  ["fig1_growth", `Figure 1. Growth in suicide research output and publishing venues, ${WIN}.`],
+  ["fig2_empiricism", `Figure 2. Evolution of empirical and non-empirical suicide scholarship, ${WIN}.`],
+  ["fig3_methodology", `Figure 3. Distribution of research methodologies in empirical suicide research, ${WIN}.`],
+  ["fig4_collaboration", `Figure 4. Trends in collaborative authorship in suicide research, ${WIN}.`],
   ["fig5_uncited", "Figure 5. Percentage of suicide research articles never cited, by publication year."],
-  ["fig6_dispersion", "Figure 6. Dispersion of suicide research beyond its specialty journals, 1989-2023."],
+  ["fig6_dispersion", `Figure 6. Dispersion of suicide research beyond its specialty journals, ${WIN}.`],
   ["fig7_sdoh", "Figure 7. Social determinants of health addressed in suicide research, by decade."],
   ["fig8_prevention", "Figure 8. Position of suicide research on the prevention continuum, by decade."],
 ];
@@ -193,7 +202,7 @@ for (const [name, caption] of FIGURES) {
 const doc = new Document({
   creator: "Yunyu Xiao",
   title: "The Suicide Research Evidence Database",
-  description: "AI-enabled analysis of knowledge production in suicide research and prevention, 1989-2025",
+  description: `AI-enabled analysis of knowledge production in suicide research and prevention, ${WIN}`,
   styles: {
     default: {
       document: { run: { font: FONT, size: BODY_SIZE } },

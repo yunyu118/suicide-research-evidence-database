@@ -1,209 +1,214 @@
 {
   "corpus": {
-    "n_records": 96641,
+    "n_records": 103528,
     "year_min": 1989,
     "year_max": 2026,
-    "n_journals": 5864,
+    "n_journals": 6459,
     "n_specialty_journal_records": 4919,
-    "n_adjacent_journal_records": 1214,
-    "n_dispersed_records": 90508,
-    "pct_with_doi": 90.76,
-    "pct_with_citations": 99.99,
+    "n_adjacent_journal_records": 1215,
+    "n_dispersed_records": 97394,
+    "pct_with_doi": 90.96,
+    "pct_with_citations": 99.59,
     "trend_window": [
       1989,
-      2023
-    ]
+      2025
+    ],
+    "citation_window": [
+      1989,
+      2022
+    ],
+    "citation_accrual_years_min": 3
   },
   "growth": {
     "first_year": 1989,
-    "last_year": 2023,
-    "n_intervals": 34,
-    "articles_first": 730,
-    "articles_last": 6167,
-    "journals_first": 326,
-    "journals_last": 1518,
-    "article_cagr_pct": 6.48,
-    "journal_cagr_pct": 4.63,
-    "cagr_differential_pp": 1.85,
-    "total_articles_in_window": 82436
+    "last_year": 2025,
+    "n_intervals": 36,
+    "articles_first": 847,
+    "articles_last": 7587,
+    "journals_first": 388,
+    "journals_last": 1553,
+    "article_cagr_pct": 6.28,
+    "journal_cagr_pct": 3.93,
+    "cagr_differential_pp": 2.35,
+    "total_articles_in_window": 98858
   },
   "records_by_decade": [
     {
       "decade": "1989",
-      "n": 730,
+      "n": 847,
       "pct": 0.8
     },
     {
       "decade": "1990s",
-      "n": 9575,
-      "pct": 9.9
+      "n": 11568,
+      "pct": 11.2
     },
     {
       "decade": "2000s",
-      "n": 16486,
-      "pct": 17.1
+      "n": 16763,
+      "pct": 16.2
     },
     {
       "decade": "2010s",
-      "n": 31895,
-      "pct": 33.0
+      "n": 31894,
+      "pct": 30.8
     },
     {
       "decade": "2020s",
-      "n": 37955,
-      "pct": 39.3
+      "n": 42456,
+      "pct": 41.0
     }
   ],
   "empiricism_by_decade": [
     {
       "decade": "1989",
-      "n_total": 703,
-      "n_empirical": 544,
-      "pct_empirical": 77.4
+      "n_total": 794,
+      "n_empirical": 575,
+      "pct_empirical": 72.4
     },
     {
       "decade": "1990s",
-      "n_total": 9228,
-      "n_empirical": 7086,
-      "pct_empirical": 76.8
+      "n_total": 10892,
+      "n_empirical": 7750,
+      "pct_empirical": 71.2
     },
     {
       "decade": "2000s",
-      "n_total": 16025,
-      "n_empirical": 12703,
-      "pct_empirical": 79.3
+      "n_total": 16261,
+      "n_empirical": 12774,
+      "pct_empirical": 78.6
     },
     {
       "decade": "2010s",
-      "n_total": 30984,
-      "n_empirical": 25990,
-      "pct_empirical": 83.9
+      "n_total": 30969,
+      "n_empirical": 25950,
+      "pct_empirical": 83.8
     },
     {
       "decade": "2020s",
-      "n_total": 37111,
-      "n_empirical": 32791,
+      "n_total": 41535,
+      "n_empirical": 36720,
       "pct_empirical": 88.4
     }
   ],
   "empiricism": {
-    "n_scientific": 95377,
-    "n_empirical": 79114,
-    "n_non_empirical": 14937,
-    "n_unclassified": 1326,
-    "pct_empirical": 82.95
+    "n_scientific": 101973,
+    "n_empirical": 83769,
+    "n_non_empirical": 16682,
+    "n_unclassified": 1522,
+    "pct_empirical": 82.15
   },
   "methodology_overall": [
     {
       "methodology": "quantitative",
-      "n": 58463,
-      "pct": 75.6
+      "n": 61951,
+      "pct": 75.7
     },
     {
       "methodology": "qualitative",
-      "n": 12373,
-      "pct": 16.0
+      "n": 12841,
+      "pct": 15.7
     },
     {
       "methodology": "review",
-      "n": 5534,
-      "pct": 7.2
+      "n": 5984,
+      "pct": 7.3
     },
     {
       "methodology": "mixed",
-      "n": 952,
-      "pct": 1.2
+      "n": 1064,
+      "pct": 1.3
     }
   ],
   "methodology_by_decade": [
     {
       "decade": "1989",
       "methodology": "mixed",
-      "n": 1,
-      "pct": 0.2
+      "n": 2,
+      "pct": 0.4
     },
     {
       "decade": "1989",
       "methodology": "qualitative",
       "n": 190,
-      "pct": 36.4
+      "pct": 34.2
     },
     {
       "decade": "1989",
       "methodology": "quantitative",
-      "n": 328,
-      "pct": 62.8
+      "n": 360,
+      "pct": 64.9
     },
     {
       "decade": "1989",
       "methodology": "review",
       "n": 3,
-      "pct": 0.6
+      "pct": 0.5
     },
     {
       "decade": "1990s",
       "methodology": "mixed",
-      "n": 17,
-      "pct": 0.2
+      "n": 21,
+      "pct": 0.3
     },
     {
       "decade": "1990s",
       "methodology": "qualitative",
-      "n": 1854,
-      "pct": 27.1
+      "n": 1904,
+      "pct": 25.7
     },
     {
       "decade": "1990s",
       "methodology": "quantitative",
-      "n": 4909,
-      "pct": 71.8
+      "n": 5426,
+      "pct": 73.2
     },
     {
       "decade": "1990s",
       "methodology": "review",
-      "n": 55,
+      "n": 63,
       "pct": 0.8
     },
     {
       "decade": "2000s",
       "methodology": "mixed",
-      "n": 60,
+      "n": 63,
       "pct": 0.5
     },
     {
       "decade": "2000s",
       "methodology": "qualitative",
-      "n": 2413,
-      "pct": 19.6
+      "n": 2403,
+      "pct": 19.4
     },
     {
       "decade": "2000s",
       "methodology": "quantitative",
-      "n": 9468,
-      "pct": 76.8
+      "n": 9537,
+      "pct": 77.0
     },
     {
       "decade": "2000s",
       "methodology": "review",
-      "n": 389,
-      "pct": 3.2
+      "n": 390,
+      "pct": 3.1
     },
     {
       "decade": "2010s",
       "methodology": "mixed",
-      "n": 274,
+      "n": 277,
       "pct": 1.1
     },
     {
       "decade": "2010s",
       "methodology": "qualitative",
-      "n": 3847,
+      "n": 3825,
       "pct": 15.1
     },
     {
       "decade": "2010s",
       "methodology": "quantitative",
-      "n": 19635,
+      "n": 19619,
       "pct": 77.2
     },
     {
@@ -215,563 +220,575 @@
     {
       "decade": "2020s",
       "methodology": "mixed",
-      "n": 600,
+      "n": 701,
       "pct": 1.9
     },
     {
       "decade": "2020s",
       "methodology": "qualitative",
-      "n": 4069,
-      "pct": 12.6
+      "n": 4519,
+      "pct": 12.5
     },
     {
       "decade": "2020s",
       "methodology": "quantitative",
-      "n": 24123,
+      "n": 27009,
       "pct": 74.9
     },
     {
       "decade": "2020s",
       "methodology": "review",
-      "n": 3398,
+      "n": 3839,
       "pct": 10.6
     }
   ],
   "collaboration_by_decade": [
     {
       "decade": "1989",
-      "mean_authors": 2.82,
+      "mean_authors": 2.65,
       "median_authors": 2.0,
-      "n": 727,
-      "pct_single_authored": 24.9,
-      "pct_multi_authored": 75.1
+      "n": 838,
+      "pct_single_authored": 29.8,
+      "pct_multi_authored": 70.2
     },
     {
       "decade": "1990s",
-      "mean_authors": 3.23,
-      "median_authors": 3.0,
-      "n": 9514,
-      "pct_single_authored": 22.2,
-      "pct_multi_authored": 77.8
+      "mean_authors": 2.98,
+      "median_authors": 2.0,
+      "n": 11477,
+      "pct_single_authored": 28.7,
+      "pct_multi_authored": 71.3
     },
     {
       "decade": "2000s",
-      "mean_authors": 4.17,
+      "mean_authors": 4.14,
       "median_authors": 4.0,
-      "n": 16451,
-      "pct_single_authored": 13.9,
-      "pct_multi_authored": 86.1
+      "n": 16723,
+      "pct_single_authored": 14.6,
+      "pct_multi_authored": 85.4
     },
     {
       "decade": "2010s",
-      "mean_authors": 5.44,
+      "mean_authors": 5.45,
       "median_authors": 5.0,
-      "n": 31830,
+      "n": 31829,
       "pct_single_authored": 7.3,
       "pct_multi_authored": 92.7
     },
     {
       "decade": "2020s",
-      "mean_authors": 6.44,
+      "mean_authors": 6.47,
       "median_authors": 5.0,
-      "n": 37889,
-      "pct_single_authored": 4.1,
-      "pct_multi_authored": 95.9
+      "n": 42388,
+      "pct_single_authored": 4.0,
+      "pct_multi_authored": 96.0
     }
   ],
   "collaboration": {
-    "mean_authors_overall": 5.38,
+    "mean_authors_overall": 5.36,
     "median_authors_overall": 4.0,
-    "pct_multi_authored": 91.24,
+    "pct_multi_authored": 90.3,
     "max_authors": 1693
   },
   "citations": {
-    "n_papers": 82436,
-    "total_citations": 2659838,
-    "mean_citations": 32.27,
-    "median_citations": 13.0,
-    "pct_uncited": 7.34,
-    "pct_cited_at_least_once": 92.66,
-    "p90": 70.0,
-    "p99": 300.0,
+    "n_papers": 78644,
+    "total_citations": 2740566,
+    "mean_citations": 34.85,
+    "median_citations": 14.0,
+    "pct_uncited": 7.26,
+    "pct_cited_at_least_once": 92.74,
+    "p90": 76.0,
+    "p99": 331.0,
     "max": 14484
   },
   "citations_by_methodology": [
     {
       "methodology": "review",
-      "n": 4172,
-      "mean_citations": 64.62,
-      "median_citations": 24.0,
-      "pct_uncited": 4.7,
-      "pct_cited": 95.3
+      "n": 3623,
+      "mean_citations": 73.61,
+      "median_citations": 28.0,
+      "pct_uncited": 4.36,
+      "pct_cited": 95.64
     },
     {
       "methodology": "quantitative",
-      "n": 49312,
-      "mean_citations": 33.88,
-      "median_citations": 15.0,
-      "pct_uncited": 4.88,
-      "pct_cited": 95.12
+      "n": 45971,
+      "mean_citations": 37.21,
+      "median_citations": 17.0,
+      "pct_uncited": 4.44,
+      "pct_cited": 95.56
     },
     {
       "methodology": "mixed",
-      "n": 698,
-      "mean_citations": 24.12,
-      "median_citations": 10.0,
-      "pct_uncited": 7.02,
-      "pct_cited": 92.98
+      "n": 630,
+      "mean_citations": 26.41,
+      "median_citations": 12.0,
+      "pct_uncited": 6.35,
+      "pct_cited": 93.65
     },
     {
       "methodology": "qualitative",
-      "n": 10818,
-      "mean_citations": 14.38,
-      "median_citations": 6.0,
-      "pct_uncited": 11.72,
-      "pct_cited": 88.28
+      "n": 10174,
+      "mean_citations": 15.74,
+      "median_citations": 7.0,
+      "pct_uncited": 10.97,
+      "pct_cited": 89.03
     }
   ],
   "citations_specialty_vs_dispersed": {
     "specialty": {
-      "n_papers": 4484,
-      "total_citations": 188489,
-      "mean_citations": 42.04,
-      "median_citations": 22.0,
-      "pct_uncited": 3.01,
-      "pct_cited_at_least_once": 96.99,
-      "p90": 91.0,
-      "p99": 304.1900000000005,
+      "n_papers": 4282,
+      "total_citations": 186820,
+      "mean_citations": 43.63,
+      "median_citations": 24.0,
+      "pct_uncited": 2.78,
+      "pct_cited_at_least_once": 97.22,
+      "p90": 93.0,
+      "p99": 313.7099999999964,
       "max": 2054
     },
     "dispersed": {
-      "n_papers": 76904,
-      "total_citations": 2445022,
-      "mean_citations": 31.79,
-      "median_citations": 12.0,
-      "pct_uncited": 7.64,
-      "pct_cited_at_least_once": 92.36,
-      "p90": 69.0,
-      "p99": 302.0,
+      "n_papers": 73373,
+      "total_citations": 2527770,
+      "mean_citations": 34.45,
+      "median_citations": 13.0,
+      "pct_uncited": 7.57,
+      "pct_cited_at_least_once": 92.43,
+      "p90": 75.0,
+      "p99": 332.27999999999884,
       "max": 14484
     }
   },
   "dispersion": {
-    "first_year_pct_specialty": 2.88,
-    "last_year_pct_specialty": 3.29,
-    "overall_pct_specialty": 5.09
+    "first_year_pct_specialty": 2.48,
+    "last_year_pct_specialty": 2.79,
+    "overall_pct_specialty": 4.75
   },
   "prevention_level_overall": [
     {
       "prevention_level": "not_applicable",
-      "n": 88072,
+      "n": 94339,
       "pct": 91.1
     },
     {
       "prevention_level": "treatment",
-      "n": 5981,
+      "n": 6380,
       "pct": 6.2
     },
     {
       "prevention_level": "selective",
-      "n": 1029,
+      "n": 1116,
       "pct": 1.1
     },
     {
       "prevention_level": "indicated",
-      "n": 599,
+      "n": 659,
       "pct": 0.6
     },
     {
       "prevention_level": "postvention",
-      "n": 587,
+      "n": 628,
       "pct": 0.6
     },
     {
       "prevention_level": "universal",
-      "n": 373,
+      "n": 406,
       "pct": 0.4
     }
   ],
   "outcome_construct_overall": [
     {
       "outcome_construct": "not_specified",
-      "n": 38915,
+      "n": 41691,
       "pct": 40.3
     },
     {
       "outcome_construct": "suicidal_ideation",
-      "n": 22629,
-      "pct": 23.4
+      "n": 24351,
+      "pct": 23.5
     },
     {
       "outcome_construct": "suicide_attempt",
-      "n": 21277,
-      "pct": 22.0
+      "n": 22444,
+      "pct": 21.7
     },
     {
       "outcome_construct": "suicide_death",
-      "n": 10499,
-      "pct": 10.9
+      "n": 11405,
+      "pct": 11.0
     },
     {
       "outcome_construct": "self_harm_undifferentiated",
-      "n": 10178,
-      "pct": 10.5
+      "n": 10956,
+      "pct": 10.6
     },
     {
       "outcome_construct": "non_suicidal_self_injury",
-      "n": 4587,
-      "pct": 4.7
+      "n": 5025,
+      "pct": 4.9
     },
     {
       "outcome_construct": "service_use_or_care_process",
-      "n": 3917,
+      "n": 4260,
       "pct": 4.1
     },
     {
       "outcome_construct": "attitudes_or_stigma",
-      "n": 3649,
-      "pct": 3.8
+      "n": 3992,
+      "pct": 3.9
     },
     {
       "outcome_construct": "suicide_bereavement",
-      "n": 614,
+      "n": 654,
       "pct": 0.6
     }
   ],
   "population_overall": [
     {
       "population": "general_population",
-      "n": 41269,
-      "pct": 42.7
+      "n": 44115,
+      "pct": 42.6
     },
     {
       "population": "youth_adolescent",
-      "n": 24929,
-      "pct": 25.8
+      "n": 27002,
+      "pct": 26.1
     },
     {
       "population": "clinical_psychiatric",
-      "n": 17090,
-      "pct": 17.7
+      "n": 18006,
+      "pct": 17.4
     },
     {
       "population": "occupational",
-      "n": 6819,
-      "pct": 7.1
+      "n": 7471,
+      "pct": 7.2
     },
     {
       "population": "older_adult",
-      "n": 3975,
+      "n": 4232,
       "pct": 4.1
     },
     {
       "population": "veteran_military",
-      "n": 3502,
+      "n": 3723,
       "pct": 3.6
     },
     {
       "population": "primary_care",
-      "n": 2790,
-      "pct": 2.9
+      "n": 2944,
+      "pct": 2.8
     },
     {
       "population": "rural",
-      "n": 2388,
+      "n": 2541,
       "pct": 2.5
     },
     {
       "population": "perinatal",
-      "n": 2353,
+      "n": 2493,
       "pct": 2.4
     },
     {
       "population": "lgbtq",
-      "n": 2272,
+      "n": 2464,
       "pct": 2.4
     },
     {
       "population": "racial_ethnic_minority",
-      "n": 2118,
+      "n": 2300,
       "pct": 2.2
     },
     {
       "population": "justice_involved",
-      "n": 1663,
+      "n": 1772,
       "pct": 1.7
     },
     {
       "population": "indigenous",
-      "n": 1208,
-      "pct": 1.2
+      "n": 1302,
+      "pct": 1.3
     }
   ],
   "study_design_overall": [
     {
       "study_design": "cross_sectional",
-      "n": 9694,
-      "pct": 10.0
+      "n": 10490,
+      "pct": 10.1
     },
     {
       "study_design": "systematic_review_meta_analysis",
-      "n": 4569,
-      "pct": 4.7
+      "n": 4933,
+      "pct": 4.8
     },
     {
       "study_design": "registry_linkage",
-      "n": 2552,
-      "pct": 2.6
+      "n": 2799,
+      "pct": 2.7
     },
     {
       "study_design": "qualitative_interview",
-      "n": 2327,
+      "n": 2507,
       "pct": 2.4
     },
     {
-      "study_design": "rct",
-      "n": 2116,
+      "study_design": "scoping_narrative_review",
+      "n": 2300,
       "pct": 2.2
     },
     {
-      "study_design": "scoping_narrative_review",
-      "n": 2056,
-      "pct": 2.1
+      "study_design": "rct",
+      "n": 2284,
+      "pct": 2.2
     },
     {
       "study_design": "case_control",
-      "n": 1980,
+      "n": 2101,
       "pct": 2.0
     },
     {
-      "study_design": "cohort_prospective",
-      "n": 1350,
+      "study_design": "ecological_timeseries",
+      "n": 1468,
       "pct": 1.4
     },
     {
-      "study_design": "ecological_timeseries",
-      "n": 1312,
+      "study_design": "cohort_prospective",
+      "n": 1424,
       "pct": 1.4
     },
     {
       "study_design": "psychometric",
-      "n": 1184,
+      "n": 1248,
       "pct": 1.2
     },
     {
       "study_design": "mixed_methods",
-      "n": 1057,
+      "n": 1177,
       "pct": 1.1
     },
     {
       "study_design": "quasi_experimental",
-      "n": 644,
+      "n": 710,
       "pct": 0.7
     },
     {
       "study_design": "psychological_autopsy",
-      "n": 625,
+      "n": 658,
       "pct": 0.6
     },
     {
       "study_design": "simulation_modelling",
-      "n": 99,
+      "n": 104,
       "pct": 0.1
     }
   ],
   "sdoh_domain_overall": [
     {
       "sdoh_domain": "none",
-      "n": 73572,
-      "pct": 76.1
+      "n": 78610,
+      "pct": 75.9
     },
     {
       "sdoh_domain": "social_community_context",
-      "n": 8643,
-      "pct": 8.9
+      "n": 9319,
+      "pct": 9.0
     },
     {
       "sdoh_domain": "firearm_access_means",
-      "n": 4426,
-      "pct": 4.6
+      "n": 4861,
+      "pct": 4.7
     },
     {
       "sdoh_domain": "economic_stability",
-      "n": 4401,
-      "pct": 4.6
+      "n": 4687,
+      "pct": 4.5
     },
     {
       "sdoh_domain": "discrimination_racism",
-      "n": 2013,
-      "pct": 2.1
+      "n": 2243,
+      "pct": 2.2
     },
     {
       "sdoh_domain": "digital_social_media",
-      "n": 1732,
-      "pct": 1.8
+      "n": 1948,
+      "pct": 1.9
     },
     {
       "sdoh_domain": "healthcare_access",
-      "n": 1462,
+      "n": 1573,
       "pct": 1.5
     },
     {
       "sdoh_domain": "incarceration",
-      "n": 1423,
+      "n": 1521,
       "pct": 1.5
     },
     {
       "sdoh_domain": "neighborhood_environment",
-      "n": 1231,
+      "n": 1311,
       "pct": 1.3
     },
     {
       "sdoh_domain": "immigration_status",
-      "n": 924,
+      "n": 993,
       "pct": 1.0
     },
     {
-      "sdoh_domain": "housing_homelessness",
-      "n": 702,
+      "sdoh_domain": "education_access",
+      "n": 758,
       "pct": 0.7
     },
     {
-      "sdoh_domain": "education_access",
-      "n": 678,
+      "sdoh_domain": "housing_homelessness",
+      "n": 742,
       "pct": 0.7
     },
     {
       "sdoh_domain": "food_insecurity",
-      "n": 226,
+      "n": 238,
       "pct": 0.2
     }
   ],
   "means_focus_overall": [
     {
       "means_focus": "none",
-      "n": 85531,
-      "pct": 88.5
+      "n": 91791,
+      "pct": 88.7
     },
     {
       "means_focus": "poisoning_overdose",
-      "n": 5720,
-      "pct": 5.9
+      "n": 5983,
+      "pct": 5.8
     },
     {
       "means_focus": "firearm",
-      "n": 2596,
+      "n": 2789,
       "pct": 2.7
     },
     {
       "means_focus": "hanging",
-      "n": 2054,
+      "n": 2154,
       "pct": 2.1
     },
     {
       "means_focus": "pesticide",
-      "n": 1242,
-      "pct": 1.3
+      "n": 1290,
+      "pct": 1.2
     },
     {
       "means_focus": "jumping",
-      "n": 835,
+      "n": 933,
       "pct": 0.9
     },
     {
       "means_focus": "drowning",
-      "n": 550,
-      "pct": 0.6
+      "n": 569,
+      "pct": 0.5
     }
   ],
   "sdoh": {
-    "pct_sdoh_focused": 23.87,
-    "n_sdoh_focused": 23069
+    "pct_sdoh_focused": 24.07,
+    "n_sdoh_focused": 24918
   },
   "sdoh_by_decade": [
     {
       "decade": "1989",
-      "n": 730,
-      "pct": 11.4
+      "n": 847,
+      "pct": 11.5
     },
     {
       "decade": "1990s",
-      "n": 9575,
+      "n": 11568,
       "pct": 13.5
     },
     {
       "decade": "2000s",
-      "n": 16486,
+      "n": 16763,
       "pct": 16.5
     },
     {
       "decade": "2010s",
-      "n": 31895,
+      "n": 31894,
       "pct": 23.1
     },
     {
       "decade": "2020s",
-      "n": 37955,
-      "pct": 30.5
+      "n": 42456,
+      "pct": 30.9
     }
   ],
   "source_overlap": [
     {
       "source_combination": "pubmed",
-      "n": 47064,
-      "pct": 48.7,
+      "n": 48447,
+      "pct": 46.8,
       "n_sources": 1
     },
     {
       "source_combination": "europepmc+pubmed",
-      "n": 35671,
-      "pct": 36.91,
+      "n": 35107,
+      "pct": 33.91,
       "n_sources": 2
     },
     {
       "source_combination": "europepmc",
-      "n": 6961,
-      "pct": 7.2,
+      "n": 7646,
+      "pct": 7.39,
       "n_sources": 1
     },
     {
       "source_combination": "europepmc+pubmed+openalex",
-      "n": 4104,
-      "pct": 4.25,
+      "n": 6564,
+      "pct": 6.34,
       "n_sources": 3
     },
     {
       "source_combination": "openalex",
-      "n": 833,
-      "pct": 0.86,
+      "n": 2596,
+      "pct": 2.51,
       "n_sources": 1
     },
     {
-      "source_combination": "europepmc+europepmc+pubmed",
-      "n": 811,
-      "pct": 0.84,
-      "n_sources": 3
-    },
-    {
       "source_combination": "openalex+pubmed",
-      "n": 660,
-      "pct": 0.68,
+      "n": 1353,
+      "pct": 1.31,
       "n_sources": 2
     },
     {
-      "source_combination": "europepmc+openalex+pubmed",
-      "n": 285,
-      "pct": 0.29,
+      "source_combination": "europepmc+europepmc+pubmed",
+      "n": 932,
+      "pct": 0.9,
       "n_sources": 3
     },
     {
+      "source_combination": "europepmc+openalex+openalex+pubmed",
+      "n": 295,
+      "pct": 0.28,
+      "n_sources": 4
+    },
+    {
       "source_combination": "europepmc+openalex",
-      "n": 215,
-      "pct": 0.22,
+      "n": 221,
+      "pct": 0.21,
       "n_sources": 2
     },
     {
       "source_combination": "europepmc+pubmed+openalex+openalex",
-      "n": 17,
-      "pct": 0.02,
+      "n": 178,
+      "pct": 0.17,
       "n_sources": 4
+    },
+    {
+      "source_combination": "europepmc+openalex+pubmed",
+      "n": 148,
+      "pct": 0.14,
+      "n_sources": 3
+    },
+    {
+      "source_combination": "openalex+openalex+pubmed",
+      "n": 24,
+      "pct": 0.02,
+      "n_sources": 3
     },
     {
       "source_combination": "europepmc+europepmc+pubmed+openalex",
@@ -780,10 +797,10 @@
       "n_sources": 4
     },
     {
-      "source_combination": "openalex+openalex+pubmed",
-      "n": 5,
-      "pct": 0.01,
-      "n_sources": 3
+      "source_combination": "europepmc+pubmed+openalex+openalex+openalex",
+      "n": 2,
+      "pct": 0.0,
+      "n_sources": 5
     },
     {
       "source_combination": "europepmc+europepmc+europepmc+pubmed",
@@ -792,15 +809,15 @@
       "n_sources": 4
     }
   ],
-  "single_source_only_pct": 56.76,
+  "single_source_only_pct": 56.7,
   "dedup_report": {
-    "input_records": 193597,
-    "output_records": 136499,
-    "duplicates_removed": 57098,
-    "doi_merges": 46931,
-    "pmid_merges": 10084,
-    "fuzzy_merges": 83,
-    "review_band_flagged": 35,
+    "input_records": 209691,
+    "output_records": 143577,
+    "duplicates_removed": 66114,
+    "doi_merges": 54222,
+    "pmid_merges": 11771,
+    "fuzzy_merges": 121,
+    "review_band_flagged": 191,
     "auto_accept_threshold": 90.0,
     "review_band": [
       80.0,
@@ -808,62 +825,65 @@
     ]
   },
   "screen_report": {
-    "total_evaluated": 136499,
-    "passed": 96641,
-    "excluded": 39858,
+    "total_evaluated": 143577,
+    "passed": 103528,
+    "excluded": 40049,
     "by_reason": {
-      "pass": 96641,
-      "no_or_short_abstract": 22014,
-      "no_topical_term": 13229,
-      "metaphorical_use": 4615
+      "pass": 103528,
+      "no_or_short_abstract": 21848,
+      "no_topical_term": 13485,
+      "metaphorical_use": 4716
     },
     "journal_resolution_methods": {
-      "issn": 134117,
-      "exact_key": 356,
-      "unresolved": 2026
+      "issn": 140625,
+      "exact_key": 567,
+      "unresolved": 2384,
+      "new": 1
     }
   },
   "qa_report": {
-    "n_records": 136499,
+    "n_records": 143577,
     "duplicate_sred_ids": 0,
     "duplicate_dois": 0,
     "missing_title": 274,
-    "missing_abstract": 21484,
+    "missing_abstract": 20986,
     "missing_year": 0,
-    "missing_journal": 2026,
+    "missing_journal": 2384,
     "year_out_of_range": 0,
-    "zero_author_records": 2073,
+    "zero_author_records": 2112,
     "implausible_author_count": 10,
     "negative_citations": 0,
-    "doi_coverage_pct": 87.54,
-    "abstract_coverage_pct": 84.26,
-    "citation_coverage_pct": 44.07,
+    "doi_coverage_pct": 87.92,
+    "abstract_coverage_pct": 85.38,
+    "citation_coverage_pct": 45.73,
     "records_by_source": {
-      "pubmed": 75464,
-      "europepmc+pubmed": 37226,
-      "openalex": 10123,
-      "europepmc": 7069,
-      "europepmc+pubmed+openalex": 4107,
-      "openalex+pubmed": 1130,
-      "europepmc+europepmc+pubmed": 842,
-      "europepmc+openalex+pubmed": 285,
-      "europepmc+openalex": 215,
-      "europepmc+pubmed+openalex+openalex": 18,
+      "pubmed": 76455,
+      "europepmc+pubmed": 36477,
+      "openalex": 12299,
+      "europepmc": 7754,
+      "europepmc+pubmed+openalex": 6755,
+      "openalex+pubmed": 1968,
+      "europepmc+europepmc+pubmed": 966,
+      "europepmc+openalex+openalex+pubmed": 295,
+      "europepmc+openalex": 223,
+      "europepmc+pubmed+openalex+openalex": 180,
+      "europepmc+openalex+pubmed": 162,
+      "openalex+openalex+pubmed": 25,
       "europepmc+europepmc+pubmed+openalex": 14,
-      "openalex+openalex+pubmed": 5,
+      "europepmc+pubmed+openalex+openalex+openalex": 3,
       "europepmc+europepmc+europepmc+pubmed": 1
     },
     "records_by_venue_tier": {
-      "dispersed": 120602,
+      "dispersed": 127680,
       "adjacent_b": 9387,
       "core_a": 6510
     },
     "records_by_topic_focus": {
-      "focused": 76401,
-      "peripheral": 49975,
-      "nan": 10123
+      "focused": 79450,
+      "peripheral": 51828,
+      "nan": 12299
     },
-    "n_unique_journals": 7152,
+    "n_unique_journals": 7772,
     "year_min": 1989,
     "year_max": 2026,
     "hard_failures": []
@@ -872,88 +892,88 @@
     "backend": "distant",
     "label_availability": {
       "is_scientific": {
-        "n_labelled": 96638,
+        "n_labelled": 103526,
         "pct_labelled": 100.0,
         "by_source": {
-          "medline": 96638
+          "medline": 103526
         },
         "by_class": {
-          "True": 95374,
-          "False": 1264
+          "True": 101971,
+          "False": 1555
         }
       },
       "is_empirical": {
-        "n_labelled": 58845,
-        "pct_labelled": 60.89,
+        "n_labelled": 61304,
+        "pct_labelled": 59.21,
         "by_source": {
-          "structured_abstract": 30623,
-          "medline": 19486,
-          "medline_narrative_review": 7218,
-          "medline_systematic_review": 938,
-          "lexical_rule": 580
+          "structured_abstract": 32643,
+          "medline": 19634,
+          "medline_narrative_review": 7250,
+          "medline_systematic_review": 1086,
+          "lexical_rule": 691
         },
         "by_class": {
-          "True": 50308,
-          "False": 8537
+          "True": 52371,
+          "False": 8933
         }
       },
       "methodology": {
-        "n_labelled": 55885,
-        "pct_labelled": 57.83,
+        "n_labelled": 58832,
+        "pct_labelled": 56.83,
         "by_source": {
-          "lexical_rule": 36197,
-          "medline": 18747,
-          "medline_systematic_review": 941
+          "lexical_rule": 39101,
+          "medline": 18642,
+          "medline_systematic_review": 1089
         },
         "by_class": {
-          "quantitative": 39091,
-          "qualitative": 10290,
-          "review": 5511,
-          "mixed": 993
+          "quantitative": 41343,
+          "qualitative": 10437,
+          "review": 5945,
+          "mixed": 1107
         }
       }
     },
     "holdout": {
       "test_fraction": 0.2,
       "seed": 20260727,
-      "n_train": 70324,
-      "n_held_out_total": 26317,
+      "n_train": 75790,
+      "n_held_out_total": 27738,
       "label_sources_treated_as_human": [
         "medline",
         "medline_narrative_review",
         "medline_systematic_review"
       ],
       "is_scientific": {
-        "n": 19328,
-        "n_held_out": 19328,
+        "n": 20706,
+        "n_held_out": 20706,
         "coverage_pct": 100.0,
-        "kappa": 0.3523,
-        "accuracy": 0.9831,
+        "kappa": 0.3643,
+        "accuracy": 0.9797,
         "report": {
           "False": {
-            "precision": 0.3382352941176471,
-            "recall": 0.3865546218487395,
-            "f1-score": 0.3607843137254902,
-            "support": 238.0
+            "precision": 0.33070866141732286,
+            "recall": 0.4315068493150685,
+            "f1-score": 0.37444279346210996,
+            "support": 292.0
           },
           "True": {
-            "precision": 0.9923383711167086,
-            "recall": 0.9905709795704557,
-            "f1-score": 0.9914538876946469,
-            "support": 19090.0
+            "precision": 0.9918327183271832,
+            "recall": 0.9875085725482512,
+            "f1-score": 0.9896659220893984,
+            "support": 20414.0
           },
-          "accuracy": 0.9831332781456954,
+          "accuracy": 0.9796677291606297,
           "macro avg": {
-            "precision": 0.6652868326171779,
-            "recall": 0.6885628007095976,
-            "f1-score": 0.6761191007100685,
-            "support": 19328.0
+            "precision": 0.661270689872253,
+            "recall": 0.7095077109316599,
+            "f1-score": 0.6820543577757542,
+            "support": 20706.0
           },
           "weighted avg": {
-            "precision": 0.9842839147670719,
-            "recall": 0.9831332781456954,
-            "f1-score": 0.9836879854489587,
-            "support": 19328.0
+            "precision": 0.982509419543368,
+            "recall": 0.9796677291606297,
+            "f1-score": 0.980989927036797,
+            "support": 20706.0
           }
         },
         "labels": [
@@ -962,46 +982,46 @@
         ],
         "confusion_matrix": [
           [
-            92,
-            146
+            126,
+            166
           ],
           [
-            180,
-            18910
+            255,
+            20159
           ]
         ]
       },
       "is_empirical": {
-        "n": 5332,
-        "n_held_out": 5529,
-        "coverage_pct": 96.44,
-        "kappa": 0.7852,
-        "accuracy": 0.9107,
+        "n": 5328,
+        "n_held_out": 5594,
+        "coverage_pct": 95.24,
+        "kappa": 0.7753,
+        "accuracy": 0.9078,
         "report": {
           "False": {
-            "precision": 0.8065494238932687,
-            "recall": 0.8944182918628111,
-            "f1-score": 0.8482142857142857,
-            "support": 1487.0
+            "precision": 0.7962848297213623,
+            "recall": 0.888121546961326,
+            "f1-score": 0.8396996408749592,
+            "support": 1448.0
           },
           "True": {
-            "precision": 0.957371707846864,
-            "recall": 0.91703511053316,
-            "f1-score": 0.936769394261424,
-            "support": 3845.0
+            "precision": 0.9563695125235658,
+            "recall": 0.9152061855670103,
+            "f1-score": 0.9353351771368366,
+            "support": 3880.0
           },
-          "accuracy": 0.9107276819204801,
+          "accuracy": 0.9078453453453453,
           "macro avg": {
-            "precision": 0.8819605658700663,
-            "recall": 0.9057267011979855,
-            "f1-score": 0.8924918399878549,
-            "support": 5332.0
+            "precision": 0.876327171122464,
+            "recall": 0.9016638662641681,
+            "f1-score": 0.8875174090058979,
+            "support": 5328.0
           },
           "weighted avg": {
-            "precision": 0.9153100543886877,
-            "recall": 0.9107276819204801,
-            "f1-score": 0.9120729489482967,
-            "support": 5332.0
+            "precision": 0.912863014644889,
+            "recall": 0.9078453453453453,
+            "f1-score": 0.9093441380026026,
+            "support": 5328.0
           }
         },
         "labels": [
@@ -1010,21 +1030,21 @@
         ],
         "confusion_matrix": [
           [
-            1330,
-            157
+            1286,
+            162
           ],
           [
-            319,
-            3526
+            329,
+            3551
           ]
         ]
       },
       "methodology": {
-        "n": 3445,
-        "n_held_out": 3938,
-        "coverage_pct": 87.48,
-        "kappa": 0.9502,
-        "accuracy": 0.9687,
+        "n": 3411,
+        "n_held_out": 3947,
+        "coverage_pct": 86.42,
+        "kappa": 0.9534,
+        "accuracy": 0.9704,
         "report": {
           "mixed": {
             "precision": 0.0,
@@ -1033,35 +1053,35 @@
             "support": 0.0
           },
           "qualitative": {
-            "precision": 0.9434977578475336,
-            "recall": 0.9740740740740741,
-            "f1-score": 0.9585421412300683,
-            "support": 1080.0
+            "precision": 0.9430438842203548,
+            "recall": 0.979631425800194,
+            "f1-score": 0.9609895337773549,
+            "support": 1031.0
           },
           "quantitative": {
-            "precision": 0.9790897908979089,
-            "recall": 0.9590361445783132,
-            "f1-score": 0.9689592209373098,
-            "support": 1660.0
+            "precision": 0.9823343848580441,
+            "recall": 0.9605181986428131,
+            "f1-score": 0.9713038053649408,
+            "support": 1621.0
           },
           "review": {
-            "precision": 0.994261119081779,
-            "recall": 0.9829787234042553,
-            "f1-score": 0.9885877318116976,
-            "support": 705.0
+            "precision": 0.9933155080213903,
+            "recall": 0.9789196310935442,
+            "f1-score": 0.9860650298606503,
+            "support": 759.0
           },
-          "accuracy": 0.9686502177068215,
+          "accuracy": 0.970389914980944,
           "macro avg": {
-            "precision": 0.7292121669568054,
-            "recall": 0.7290222355141607,
-            "f1-score": 0.7290222734947689,
-            "support": 3445.0
+            "precision": 0.7296734442749473,
+            "recall": 0.7297673138841378,
+            "f1-score": 0.7295895922507365,
+            "support": 3411.0
           },
           "weighted avg": {
-            "precision": 0.9710364935612538,
-            "recall": 0.9686502177068215,
-            "f1-score": 0.9697103541978679,
-            "support": 3445.0
+            "precision": 0.9729020091100296,
+            "recall": 0.970389914980944,
+            "f1-score": 0.9714708400719013,
+            "support": 3411.0
           }
         },
         "labels": [
@@ -1079,258 +1099,258 @@
           ],
           [
             0,
-            1052,
-            27,
+            1010,
+            20,
             1
           ],
           [
             7,
-            58,
-            1592,
-            3
+            53,
+            1557,
+            4
           ],
           [
             0,
-            5,
-            7,
-            693
+            8,
+            8,
+            743
           ]
         ]
       }
     },
     "temporal": {
       "1990s": {
-        "n_train": 86336,
-        "n_test": 3646,
-        "kappa": 0.7122,
-        "accuracy": 0.8771
+        "n_train": 91113,
+        "n_test": 2945,
+        "kappa": 0.7198,
+        "accuracy": 0.8764
       },
       "2000s": {
-        "n_train": 80155,
-        "n_test": 5946,
-        "kappa": 0.7838,
-        "accuracy": 0.9087
+        "n_train": 86765,
+        "n_test": 5861,
+        "kappa": 0.7836,
+        "accuracy": 0.908
       },
       "2010s": {
-        "n_train": 64746,
-        "n_test": 8743,
-        "kappa": 0.8147,
-        "accuracy": 0.9223
+        "n_train": 71634,
+        "n_test": 8720,
+        "kappa": 0.8112,
+        "accuracy": 0.9208
       },
       "2020s": {
-        "n_train": 58686,
-        "n_test": 8197,
-        "kappa": 0.7843,
-        "accuracy": 0.9152
+        "n_train": 61072,
+        "n_test": 9149,
+        "kappa": 0.7874,
+        "accuracy": 0.9162
       }
     },
     "training_summary": {
       "is_scientific": {
-        "n_train": 96638,
+        "n_train": 103526,
         "classes": [
           "False",
           "True"
         ],
-        "cv_kappa": 0.33274921870952523,
-        "cv_accuracy": 0.9828742316687018,
-        "macro_f1": 0.6663744527680231,
+        "cv_kappa": 0.3477970628263978,
+        "cv_accuracy": 0.9797055812066534,
+        "macro_f1": 0.6738855410129784,
         "per_class": {
           "False": {
-            "precision": 0.3434747798238591,
-            "recall": 0.33939873417721517,
-            "f1-score": 0.3414245921209709,
-            "support": 1264.0
+            "precision": 0.3410942956926659,
+            "recall": 0.37684887459807076,
+            "f1-score": 0.358081271005194,
+            "support": 1555.0
           },
           "True": {
-            "precision": 0.9912463701265345,
-            "recall": 0.991402268962191,
-            "f1-score": 0.9913243134150752,
-            "support": 95374.0
+            "precision": 0.990482083922678,
+            "recall": 0.9888988045620813,
+            "f1-score": 0.9896898110207627,
+            "support": 101971.0
           }
         },
         "n_splits": 3
       },
       "is_empirical": {
-        "n_train": 57954,
+        "n_train": 60147,
         "classes": [
           "False",
           "True"
         ],
-        "cv_kappa": 0.8010381448701533,
-        "cv_accuracy": 0.9505814956689789,
-        "macro_f1": 0.9004212879754963,
+        "cv_kappa": 0.8073704018735697,
+        "cv_accuracy": 0.9528821055081717,
+        "macro_f1": 0.9035911448593961,
         "per_class": {
           "False": {
-            "precision": 0.7710750193348801,
-            "recall": 0.8980826148500837,
-            "f1-score": 0.8297467601949827,
-            "support": 7771.0
+            "precision": 0.7752248834940935,
+            "recall": 0.9039555162391002,
+            "f1-score": 0.8346557759626605,
+            "support": 7913.0
           },
           "True": {
-            "precision": 0.983804674559843,
-            "recall": 0.9587111173106431,
-            "f1-score": 0.9710958157560099,
-            "support": 50183.0
+            "precision": 0.9850746268656716,
+            "recall": 0.9602940613393575,
+            "f1-score": 0.9725265137561316,
+            "support": 52234.0
           }
         },
         "n_splits": 3
       },
       "methodology": {
-        "n_train": 55885,
+        "n_train": 58832,
         "classes": [
           "mixed",
           "qualitative",
           "quantitative",
           "review"
         ],
-        "cv_kappa": 0.9086890445003644,
-        "cv_accuracy": 0.9576093763979601,
-        "macro_f1": 0.890845021897315,
+        "cv_kappa": 0.90913591582272,
+        "cv_accuracy": 0.958101033451183,
+        "macro_f1": 0.8934804931716019,
         "per_class": {
           "mixed": {
-            "precision": 0.835742444152431,
-            "recall": 0.6404833836858006,
-            "f1-score": 0.7251995438996579,
-            "support": 993.0
+            "precision": 0.8515439429928741,
+            "recall": 0.6476964769647696,
+            "f1-score": 0.7357619291944587,
+            "support": 1107.0
           },
           "qualitative": {
-            "precision": 0.910435110190243,
-            "recall": 0.9394557823129251,
-            "f1-score": 0.9247178113640712,
-            "support": 10290.0
+            "precision": 0.9107375069663757,
+            "recall": 0.9394462010156175,
+            "f1-score": 0.924869122294015,
+            "support": 10437.0
           },
           "quantitative": {
-            "precision": 0.972151447207501,
-            "recall": 0.9760558696375125,
-            "f1-score": 0.974099745975823,
-            "support": 39091.0
+            "precision": 0.9719923002887392,
+            "recall": 0.9770940667102048,
+            "f1-score": 0.9745365065196676,
+            "support": 41343.0
           },
           "review": {
-            "precision": 0.9619627234689996,
-            "recall": 0.9178007621121393,
-            "f1-score": 0.9393629863497075,
-            "support": 5511.0
+            "precision": 0.9620409604519774,
+            "recall": 0.9165685449957948,
+            "f1-score": 0.9387544146782668,
+            "support": 5945.0
           }
         },
         "n_splits": 3
       }
     },
     "label_coverage": {
-      "n_records": 96641,
-      "pct_scientific": 98.69,
-      "pct_empirical_of_scientific": 82.95,
-      "pct_methodology_assigned": 80.01,
-      "pct_empirical_uncertain": 1.37,
+      "n_records": 103528,
+      "pct_scientific": 98.5,
+      "pct_empirical_of_scientific": 82.15,
+      "pct_methodology_assigned": 79.05,
+      "pct_empirical_uncertain": 1.47,
       "backend_mix": {
-        "scientific:human_indexing|empirical:structured_abstract|method:model": 29665,
-        "scientific:human_indexing|empirical:model|method:model": 27745,
-        "scientific:human_indexing|empirical:human_indexing|method:human_indexing": 19615,
-        "scientific:human_indexing|empirical:model|method:na": 7729,
-        "scientific:human_indexing|empirical:human_indexing|method:na": 7207,
-        "scientific:human_indexing|empirical:uncertain|method:na": 1326,
-        "scientific:human_indexing|empirical:na|method:na": 1264,
-        "scientific:human_indexing|empirical:model|method:uncertain": 1056,
-        "scientific:human_indexing|empirical:structured_abstract|method:uncertain": 736,
+        "scientific:human_indexing|empirical:structured_abstract|method:model": 31639,
+        "scientific:human_indexing|empirical:model|method:model": 30248,
+        "scientific:human_indexing|empirical:human_indexing|method:human_indexing": 19646,
+        "scientific:human_indexing|empirical:model|method:na": 9442,
+        "scientific:human_indexing|empirical:human_indexing|method:na": 7239,
+        "scientific:human_indexing|empirical:na|method:na": 1555,
+        "scientific:human_indexing|empirical:uncertain|method:na": 1522,
+        "scientific:human_indexing|empirical:model|method:uncertain": 1147,
+        "scientific:human_indexing|empirical:structured_abstract|method:uncertain": 782,
         "scientific:human_indexing|empirical:structured_abstract|method:rule": 167,
-        "scientific:human_indexing|empirical:model|method:rule": 128,
-        "scientific:model|empirical:model|method:model": 2
+        "scientific:human_indexing|empirical:model|method:rule": 139,
+        "scientific:model|empirical:model|method:model": 1
       }
     }
   },
   "classifier_summary": {
     "is_scientific": {
-      "n_train": 96638,
+      "n_train": 103526,
       "classes": [
         "False",
         "True"
       ],
-      "cv_kappa": 0.33274921870952523,
-      "cv_accuracy": 0.9828742316687018,
-      "macro_f1": 0.6663744527680231,
+      "cv_kappa": 0.3477970628263978,
+      "cv_accuracy": 0.9797055812066534,
+      "macro_f1": 0.6738855410129784,
       "per_class": {
         "False": {
-          "precision": 0.3434747798238591,
-          "recall": 0.33939873417721517,
-          "f1-score": 0.3414245921209709,
-          "support": 1264.0
+          "precision": 0.3410942956926659,
+          "recall": 0.37684887459807076,
+          "f1-score": 0.358081271005194,
+          "support": 1555.0
         },
         "True": {
-          "precision": 0.9912463701265345,
-          "recall": 0.991402268962191,
-          "f1-score": 0.9913243134150752,
-          "support": 95374.0
+          "precision": 0.990482083922678,
+          "recall": 0.9888988045620813,
+          "f1-score": 0.9896898110207627,
+          "support": 101971.0
         }
       },
       "n_splits": 3
     },
     "is_empirical": {
-      "n_train": 57954,
+      "n_train": 60147,
       "classes": [
         "False",
         "True"
       ],
-      "cv_kappa": 0.8010381448701533,
-      "cv_accuracy": 0.9505814956689789,
-      "macro_f1": 0.9004212879754963,
+      "cv_kappa": 0.8073704018735697,
+      "cv_accuracy": 0.9528821055081717,
+      "macro_f1": 0.9035911448593961,
       "per_class": {
         "False": {
-          "precision": 0.7710750193348801,
-          "recall": 0.8980826148500837,
-          "f1-score": 0.8297467601949827,
-          "support": 7771.0
+          "precision": 0.7752248834940935,
+          "recall": 0.9039555162391002,
+          "f1-score": 0.8346557759626605,
+          "support": 7913.0
         },
         "True": {
-          "precision": 0.983804674559843,
-          "recall": 0.9587111173106431,
-          "f1-score": 0.9710958157560099,
-          "support": 50183.0
+          "precision": 0.9850746268656716,
+          "recall": 0.9602940613393575,
+          "f1-score": 0.9725265137561316,
+          "support": 52234.0
         }
       },
       "n_splits": 3
     },
     "methodology": {
-      "n_train": 55885,
+      "n_train": 58832,
       "classes": [
         "mixed",
         "qualitative",
         "quantitative",
         "review"
       ],
-      "cv_kappa": 0.9086890445003644,
-      "cv_accuracy": 0.9576093763979601,
-      "macro_f1": 0.890845021897315,
+      "cv_kappa": 0.90913591582272,
+      "cv_accuracy": 0.958101033451183,
+      "macro_f1": 0.8934804931716019,
       "per_class": {
         "mixed": {
-          "precision": 0.835742444152431,
-          "recall": 0.6404833836858006,
-          "f1-score": 0.7251995438996579,
-          "support": 993.0
+          "precision": 0.8515439429928741,
+          "recall": 0.6476964769647696,
+          "f1-score": 0.7357619291944587,
+          "support": 1107.0
         },
         "qualitative": {
-          "precision": 0.910435110190243,
-          "recall": 0.9394557823129251,
-          "f1-score": 0.9247178113640712,
-          "support": 10290.0
+          "precision": 0.9107375069663757,
+          "recall": 0.9394462010156175,
+          "f1-score": 0.924869122294015,
+          "support": 10437.0
         },
         "quantitative": {
-          "precision": 0.972151447207501,
-          "recall": 0.9760558696375125,
-          "f1-score": 0.974099745975823,
-          "support": 39091.0
+          "precision": 0.9719923002887392,
+          "recall": 0.9770940667102048,
+          "f1-score": 0.9745365065196676,
+          "support": 41343.0
         },
         "review": {
-          "precision": 0.9619627234689996,
-          "recall": 0.9178007621121393,
-          "f1-score": 0.9393629863497075,
-          "support": 5511.0
+          "precision": 0.9620409604519774,
+          "recall": 0.9165685449957948,
+          "f1-score": 0.9387544146782668,
+          "support": 5945.0
         }
       },
       "n_splits": 3
     }
   },
   "prevention_assignable_pct": 8.9,
-  "means_addressed_pct": 11.5,
-  "temporal_min": 0.7122,
-  "temporal_max": 0.8147,
+  "means_addressed_pct": 11.3,
+  "temporal_min": 0.7198,
+  "temporal_max": 0.8112,
   "temporal_n_folds": 4
 }

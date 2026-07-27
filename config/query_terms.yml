@@ -14,10 +14,32 @@
 
 date_range:
   start: "1989-01-01"
-  end: "2025-12-31"
-  # Trend analyses truncate at 2023 to avoid the incomplete-indexing
-  # artefact at the recent boundary (parallels Perron et al., 2026).
-  trend_end_year: 2023
+  end: "2026-12-31"
+  # Trend analyses truncate short of the harvest boundary to avoid the
+  # incomplete-indexing artefact there (parallels Perron et al., 2026).
+  #
+  # Chosen empirically, not by convention. As of the July 2026 re-harvest the
+  # month-of-publication distribution is flat across all twelve months for
+  # 2024 and 2025 (2025: 673 records in January, 703 in December), which is
+  # what a complete year looks like. 2026 is seven months old and cannot be
+  # complete at any indexing speed, so it is harvested and reported as a
+  # partial year but excluded from every trend line and rate denominator.
+  trend_end_year: 2025
+  # Citation-based metrics need their own, earlier truncation. Publication
+  # counts are complete the moment a year is indexed; citation counts are not
+  # complete for years afterwards. Measured on the July 2026 corpus, the share
+  # of never-cited papers runs 4.9% (2018), 5.8% (2019), 7.3% (2020), 10.1%
+  # (2021), 12.3% (2022), 13.8% (2023), 21.1% (2024), 48.6% (2025). The 2024
+  # and 2025 values are accrual artefacts, not findings: those papers have not
+  # had time to be cited.
+  #
+  # citation_end_year therefore requires at least three full calendar years of
+  # accrual after publication. As of 2026 that is 2022. Applying trend_end_year
+  # to citations instead would have moved the never-cited rate from 7.3% to
+  # 11.8% and read as a decline in impact that is entirely an artefact of the
+  # window.
+  citation_end_year: 2022
+  citation_accrual_years_min: 3
   baseline_year: 1989
 
 pubmed:
